@@ -1,0 +1,2547 @@
+{
+  "section": "hitGM",
+  "title": "Critical hits for GMs",
+  "source": "Critical Rolls (Game Master's Toolbox), Nord Games, pp. 17–27. Open Game Content under OGL 1.0a.",
+  "tiers": [
+    {
+      "label": "Setback",
+      "from": 1,
+      "to": 18
+    },
+    {
+      "label": "Dangerous",
+      "from": 19,
+      "to": 36
+    },
+    {
+      "label": "Life-Threatening",
+      "from": 37,
+      "to": 55
+    },
+    {
+      "label": "Deadly",
+      "from": 56,
+      "to": 60
+    }
+  ],
+  "entries": [
+    {
+      "table": 1,
+      "d10": 1,
+      "d6": 1,
+      "columns": {
+        "slashing": "Wanna know how I got these? Double damage, and you receive a permanent scar on your face.",
+        "piercing": "All fun and games... Roll a d100. On a 2 or less, you are blinded in one eye.",
+        "bludgeoning": "Stunning blow. Make a DC 12 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.",
+        "magical": "Say what? You are deafened for 1 minute."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "status": "deafened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "minutes",
+              "value": "1"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 2,
+      "d10": 1,
+      "d6": 2,
+      "columns": {
+        "slashing": "Nasty infection. You must succeed on a DC 12 Constitution saving throw, or become poisoned in 1d4 hours.",
+        "piercing": "Punctured lung. You can take either an action or a bonus action on your next turn, but not both.",
+        "bludgeoning": "Shieldbreaker. If you are wielding a shield, it is destroyed.",
+        "magical": "Searing burst. You are blinded. You automatically fail Wisdom (Perception) checks that rely on sight, and have disadvantage on ability checks, attack rolls, and saving throws that use sight."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "poisoned",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "status": "blinded",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 3,
+      "d10": 1,
+      "d6": 3,
+      "columns": {
+        "slashing": "Dire disease. You must succeed on a DC 12 Constitution saving throw, or contract a disease. While diseased, your hit point maximum is reduced by 1d10 each dawn.",
+        "piercing": "Blood loss. Your attacks deal 1d4 less damage until you receive magical healing.",
+        "bludgeoning": "Lost teeth. You have disadvantage on Charisma (Persuasion) checks. If you cast a spell with a verbal component, you must succeed on a DC 12 Intelligence (Arcana) check or the spell does not work.",
+        "magical": "Frozen. You take 1d4 cold damage and are chilled. While chilled, you take 1d4 cold damage at the start of each of your turns. The ice can be melted as an action."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "cold",
+            "who": "you",
+            "when": "always"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": "cold",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 4,
+      "d10": 1,
+      "d6": 4,
+      "columns": {
+        "slashing": "Bleeder. Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.",
+        "piercing": "Extreme ear piercing. Make a DC 12 Constitution saving throw. On a failed save, a large section of one of your ears is severed.",
+        "bludgeoning": "Right in the kisser. Double damage, and you cannot speak properly for 1d4 rounds. Spells with a verbal component have a 50% chance of failing.",
+        "magical": "Jumbled memories. Your Intelligence modifier is reduced by 1 until you finish a long rest."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 5,
+      "d10": 1,
+      "d6": 5,
+      "columns": {
+        "slashing": "Blood in the eyes. You are blinded until the end of your next turn.",
+        "piercing": "Not the face! You receive a permanent scar on your face.",
+        "bludgeoning": "Bell-ringer. You are deafened until the end of your next turn.",
+        "magical": "Distracting visions. Your Wisdom modifier is reduced by 1 until you finish a long rest."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "deafened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 6,
+      "d10": 1,
+      "d6": 6,
+      "columns": {
+        "slashing": "Split lip. Make a DC 12 Constitution saving throw. On a failed save, you are unable to speak properly. Spells with a verbal component have a 25% chance of failing.",
+        "piercing": "Skewered. You take 1d4 damage at the start of your turn for 1d4 rounds.",
+        "bludgeoning": "Blunt force amnesia. You forget the past 1d12 hours.",
+        "magical": "Wrath of the elements. If this attack deals acid, cold, fire, lighting, or poison damage, it deals double damage; other damage types deal normal damage."
+      }
+    },
+    {
+      "table": 7,
+      "d10": 2,
+      "d6": 1,
+      "columns": {
+        "slashing": "That's a lot of blood... Double damage. If the damage is equal to, or greater than, 1/4 of your maximum hit points, make a DC 12 Wisdom saving throw. On a failed save, you become frightened of your attacker.",
+        "piercing": "Deep wound. Make a DC 12 Constitution saving throw. On a failed save, take an additional 1d4 piercing damage.",
+        "bludgeoning": "Winded. You suffer one level of exhaustion.",
+        "magical": "Wrath of the elements. If this attack deals acid, cold, fire, lighting, or poison damage, it deals double damage; other damage types deal normal damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "exhaustion",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "piercing",
+            "who": "you",
+            "when": "failedSave"
+          }
+        ]
+      }
+    },
+    {
+      "table": 8,
+      "d10": 2,
+      "d6": 2,
+      "columns": {
+        "slashing": "Bleeder. Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.",
+        "piercing": "Find the joints. This attack deals maximum damage. Make a DC 12 Constitution saving throw. On a failed save, you lose your next attack action.",
+        "bludgeoning": "Knocked off balance. Double damage, and lose 1 attack on your next turn.",
+        "magical": "Leech life. Your Constitution modifier is reduced by 1 until you finish a long rest."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 9,
+      "d10": 2,
+      "d6": 3,
+      "columns": {
+        "slashing": "Set up. One enemy within 5 ft. of you may make an attack of opportunity against you.",
+        "piercing": "Skewered. You take 1d4 damage at the beginning of your turn for the next 1d4 turns.",
+        "bludgeoning": "Gut punch. You cannot take any bonus actions for 1d4 rounds.",
+        "magical": "Wrath of the mage. If this attack deals force, necrotic, psychic, radiant, or thunder damage, it deals double damage; other damage types deal normal damage."
+      }
+    },
+    {
+      "table": 10,
+      "d10": 2,
+      "d6": 4,
+      "columns": {
+        "slashing": "Brutal slash. Attacker rerolls any damage dice with a face value of 1 or 2 for this attack.",
+        "piercing": "Target practice. Double damage, and 1 opponent within 60 ft. may make an attack of opportunity against you.",
+        "bludgeoning": "Plain and simple. This attack deals maximum damage.",
+        "magical": "Life drinker. Double damage and, if this attack deals acid, poison, or necrotic damage, your Constitution modifier is reduced by 2 until you finish a long rest."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 11,
+      "d10": 2,
+      "d6": 5,
+      "columns": {
+        "slashing": "Enraging attack. Double damage, and you may make an attack of opportunity against your attacker.",
+        "piercing": "Muscle piercer. Your next attack using a melee weapon deals 1d4 less damage.",
+        "bludgeoning": "You're not going anywhere. You cannot take the Disengage action for 1d4 rounds.",
+        "magical": "Life drinker. If this attack deals acid, poison, or necrotic damage, your Constitution modifier is reduced by 2 until you finish a long rest."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "-1d4",
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ]
+      }
+    },
+    {
+      "table": 12,
+      "d10": 2,
+      "d6": 6,
+      "columns": {
+        "slashing": "Rend armor. Make a DC 12 Dexterity saving throw. On a failed save, if you are wearing leather or cloth armor, its effectiveness is reduced by 1.",
+        "piercing": "Open target. One enemy within 5 ft. of you may make an attack of opportunity against you.",
+        "bludgeoning": "Get down! Double damage and, if the resulting damage is equal to or greater than 1/2 of your maximum hit points, you are knocked prone.",
+        "magical": "Magical barrage. An additional target within range is affected at 1/2 potency, or the spell's area of effect is increased by 5 ft."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 13,
+      "d10": 3,
+      "d6": 1,
+      "columns": {
+        "slashing": "Something slipped. Your AC is reduced by 1d4 for 1d4 rounds.",
+        "piercing": "Distracting strike. Double damage, and you cannot take reactions or bonus actions until the end of your next turn.",
+        "bludgeoning": "Crushing blow. Make a DC 12 Dexterity saving throw. On a failed save, if you are wearing plate armor, its effectiveness is reduced by 1.",
+        "magical": "Lingering energy. Make a DC 12 Constitution saving throw. On a failed save, take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d4 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 14,
+      "d10": 3,
+      "d6": 2,
+      "columns": {
+        "slashing": "Plain and simple. This attack deals maximum damage.",
+        "piercing": "Armor piercing strike. Make a DC 12 Dexterity saving throw. On a failed save, if you are wearing chain or ring armor, its effectiveness is reduced by 1.",
+        "bludgeoning": "...And stay down. You are pushed back 5 ft. and must make a DC 12 Dexterity saving throw. On a failed save, you are knocked prone and take 1d4 damage.",
+        "magical": "Boom. Double damage and, if this attack deals force or thunder damage, you are pushed back 1d4 × 5 ft."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": null,
+            "who": "you",
+            "when": "failedSave"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 15,
+      "d10": 3,
+      "d6": 3,
+      "columns": {
+        "slashing": "Terrifying slash. Double damage, and make a DC 12 Wisdom saving throw. On a failed save, you become frightened of your attacker.",
+        "piercing": "Internal bleeding. Make a DC 12 Constitution saving throw. On a failed save, take 1d4 damage at the beginning of your turn for the next 1d4 rounds.",
+        "bludgeoning": "Knocked off balance. An adjacent enemy can make an attack of opportunity against you.",
+        "magical": "Lingering weakness. You are vulnerable to the damage type taken from this attack for 1d4 rounds."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 16,
+      "d10": 3,
+      "d6": 4,
+      "columns": {
+        "slashing": "Opened defenses. The next attack made against you has advantage.",
+        "piercing": "You missed a spot. You are vulnerable to piercing damage for 1d4 rounds.",
+        "bludgeoning": "Staggered. Double damage, and all attacks against you have advantage until the start of your next turn.",
+        "magical": "Spirit drain. The hit points lost from this attack cannot be healed, except by magic."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "against": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "against": true,
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 17,
+      "d10": 3,
+      "d6": 5,
+      "columns": {
+        "slashing": "Wild swing. Any creature within 5 ft. of you and your attacker takes 1/2 the damage you took.",
+        "piercing": "Flurry. Double damage, and your attacker may make another attack against you with disadvantage.",
+        "bludgeoning": "Softening blow. You are vulnerable to bludgeoning damage for 1d4 rounds.",
+        "magical": "Lingering energy. Maximum damage, and you take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d4 rounds."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 18,
+      "d10": 3,
+      "d6": 6,
+      "columns": {
+        "slashing": "This is going to hurt. You are vulnerable to slashing damage for 1d4 rounds.",
+        "piercing": "Stabbing pains. You deal minimum damage on all attacks for 1d4 rounds.",
+        "bludgeoning": "Dominoes. You and another creature within 5 ft. of you and your attacker must make opposed Strength (Athletics) checks. The loser is knocked prone.",
+        "magical": "Dispersal. Double damage, and the spell deals normal damage to a target within 5 ft. of you."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "minDamage",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 19,
+      "d10": 4,
+      "d6": 1,
+      "columns": {
+        "slashing": "Bleeder. Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.",
+        "piercing": "Pinned. The attack pins your foot to the ground. Make a DC 12 Strength check to free yourself, taking an additional 1d4 damage with each failed attempt.",
+        "bludgeoning": "Hit the dirt. You are knocked prone.",
+        "magical": "Crackling energy. Your Dexterity modifier is reduced by 1 until you finish a long rest."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 20,
+      "d10": 4,
+      "d6": 2,
+      "columns": {
+        "slashing": "Sliced tendon. Your speed is reduced by 1/2 for 1d4 rounds.",
+        "piercing": "Whose heel? For the next 1d4 rounds, you must make a DC 12 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you fall prone.",
+        "bludgeoning": "Kneecapped. Double damage, and you have disadvantage on skill checks that rely on your legs until you finish a short rest.",
+        "magical": "Sap strength. If this attack deals acid, poison, or necrotic damage, your Strength modifier is reduced by 2 until you finish a long rest."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 21,
+      "d10": 4,
+      "d6": 3,
+      "columns": {
+        "slashing": "Sweep the legs. Make a DC 12 Dexterity saving throw. On a failed save, you are knocked prone.",
+        "piercing": "A shot in the arm. Double damage, and you have disadvantage on Strength-based attacks for 1d4 rounds.",
+        "bludgeoning": "This little piggy. Your speed is reduced by 1/2 for 1d4 rounds.",
+        "magical": "Erode. Your AC is reduced by 1d4 for 1d4 rounds."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "abilities": [
+              "str"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 22,
+      "d10": 4,
+      "d6": 4,
+      "columns": {
+        "slashing": "Off form. You have disadvantage on your next melee attack.",
+        "piercing": "The thighs have it. Your speed is reduced by 5 ft. until you finish a short rest.",
+        "bludgeoning": "Right on the shins. You cannot take the Dash action for 1d4 rounds.",
+        "magical": "Ka-boom! Double damage and, if this attack deals force or thunder damage, you are knocked prone."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "-5",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rest",
+              "rest": "short"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 23,
+      "d10": 4,
+      "d6": 5,
+      "columns": {
+        "slashing": "Disarmed. Double damage, and make a DC 12 Dexterity saving throw. On a failed save, drop your weapon.",
+        "piercing": "Pinned. The attack pins your arm to a wall, another target, or your own body. Make a DC 12 Strength check to free your arm, taking 1d4 damage with each failed attempt.",
+        "bludgeoning": "Crushed hand. You have disadvantage on skill checks that rely on your hands or arms until you finish a short rest.",
+        "magical": "Crackling energy. Your Dexterity modifier is reduced by 1 until you finish a short rest."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 24,
+      "d10": 4,
+      "d6": 6,
+      "columns": {
+        "slashing": "Weakening slash. You deal 1/2 damage on your next melee attack.",
+        "piercing": "Drop it! Drop what you are holding (the GM decides which hand, or determines randomly).",
+        "bludgeoning": "Rap on the knuckles. Double damage, and you have disadvantage on Dexterity-based attacks for 1d4 rounds.",
+        "magical": "I feel it in my fingers... If this attack deals acid, poison, or necrotic damage, your Dexterity modifier is reduced by 2 until you finish a long rest."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "abilities": [
+              "dex"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "halfDamage",
+            "scope": "melee",
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 25,
+      "d10": 5,
+      "d6": 1,
+      "columns": {
+        "slashing": "Off form. You have disadvantage on your next melee attack.",
+        "piercing": "Palm piercer. Double damage, and you are unable to cast spells with a somatic component for 1d4 rounds.",
+        "bludgeoning": "Drop it! Drop what you are holding (the GM decides which hand, or determines randomly).",
+        "magical": "Brain fog. You cannot take reactions for 1d4 rounds."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 26,
+      "d10": 5,
+      "d6": 2,
+      "columns": {
+        "slashing": "Follow-up. Your attacker may make 1 additional attack against you.",
+        "piercing": "Funny bone. You have disadvantage on Dexterity-based attacks for 1d4 rounds.",
+        "bludgeoning": "That'll buff out. If you are holding a shield, its effectiveness is reduced by 1.",
+        "magical": "Whispers of doom. Double damage, and you take a 1d4 penalty to your attack rolls for 1d4 rounds."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "abilities": [
+              "dex"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 27,
+      "d10": 5,
+      "d6": 3,
+      "columns": {
+        "slashing": "You got off lightly. More or less. Triple damage, that's all... Hope you don't die…",
+        "piercing": "All fun and games... Roll a d100. On a 5 or less, you are blinded in one eye.",
+        "bludgeoning": "Stunning blow. Make a DC 14 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.",
+        "magical": "Say what? You are deafened until you take a short rest."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "status": "deafened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rest",
+              "rest": "short"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 28,
+      "d10": 5,
+      "d6": 4,
+      "columns": {
+        "slashing": "Blood loss. Your attacks deal 1d4 less damage until you receive magical healing.",
+        "piercing": "Internal injury. Whenever you attempt an action in combat, you must succeed on a DC 14 Constitution saving throw, or lose your action.",
+        "bludgeoning": "Winded. You begin suffocating. This effect ends if another creature succeeds on a DC 14 Wisdom (Medicine) check to help you, or you receive magical healing.",
+        "magical": "Corrosive. You take 1d4 acid damage and are coated. While coated, you take 1d4 acid damage at the start of each of your turns. The acid can be neutralized as an action."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "acid",
+            "who": "you",
+            "when": "always"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": "acid",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 29,
+      "d10": 5,
+      "d6": 5,
+      "columns": {
+        "slashing": "Speechless. You take a nasty throat wound that prevents you from speaking. Spells that have a verbal component automatically fail.",
+        "piercing": "Dire disease. You must succeed on a DC 14 Constitution saving throw, or contract a disease. While diseased, your hit point maximum is reduced by 1d10 each dawn.",
+        "bludgeoning": "Fractured skull. You cannot take reactions.",
+        "magical": "Necrotized. You take 1d4 necrotic damage and are necrotized. While necrotized, you take 1d4 fire damage at the start of each of your turns. A successful DC 12 Wisdom (Medicine) check removes the necrotized condition."
+      },
+      "fx": {
+        "magical": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "necrotic",
+            "who": "you",
+            "when": "always"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": "necrotic",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 30,
+      "d10": 5,
+      "d6": 6,
+      "columns": {
+        "slashing": "Bleeder. Make a DC 14 Constitution saving throw. On a failed save, take 1d6 damage at the beginning of your turn for the next 1d6 rounds.",
+        "piercing": "Split lip. Spells with a verbal component have a 50% chance of failing until you are healed.",
+        "bludgeoning": "Lle quena i'lambe tel' Eldalie? Triple damage, and make a DC 14 Constitution saving throw. On a failed save, lose one of your known languages at random.",
+        "magical": "Cor blimey, guv'nor. You develop an accent completely different to the one you had before."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 31,
+      "d10": 6,
+      "d6": 1,
+      "columns": {
+        "slashing": "Not them! Make a DC 14 Wisdom saving throw. On a failed save, you become frightened of creatures of your attacker's type. Repeat this save each time you face creatures of this type until you have defeated 2d12 of them.",
+        "piercing": "Staunch the bleeding. Triple damage, and you have disadvantage on Strength, Dexterity and Constitution-based rolls for 1d6 rounds.",
+        "bludgeoning": "Bonk on the noggin. Make a DC 14 Constitution saving throw. On a failed save, permanently lose 1 point from your Intelligence ability.",
+        "magical": "QUIET! Until 2d12 days have passed, any time you attempt to speak, you shout at full volume."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack",
+              "check",
+              "save"
+            ],
+            "abilities": [
+              "dex",
+              "str",
+              "con"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 32,
+      "d10": 6,
+      "d6": 2,
+      "columns": {
+        "slashing": "Ragged scar. You receive a permanent scar on your face, and gain proficiency in Charisma (Intimidation), but lose proficiency in Charisma (Persuasion), if you had it.",
+        "piercing": "Internal bleeding. Make a DC 14 Constitution saving throw. On a failed save, take 1d6 damage at the beginning of your turn for the next 1d6 rounds.",
+        "bludgeoning": "How'd I get here? You forget the last 1d12 days.",
+        "magical": "You are feeling sleepy... Triple damage and, if this attack deals psychic damage, you are knocked unconscious."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "unconscious",
+            "who": "you",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 33,
+      "d10": 6,
+      "d6": 3,
+      "columns": {
+        "slashing": "Make them pay. Triple damage, and you have advantage on your next attack against the attacker.",
+        "piercing": "Deep wound. Make a DC 14 Constitution saving throw. On a failed save, take an additional 1d6 piercing damage.",
+        "bludgeoning": "...And stay down. You are pushed back 10 ft. Make a DC 14 Dexterity saving throw. On a failed save, you are knocked prone and take 1d6 damage.",
+        "magical": "Magical barrage. An additional target within range is affected, or the spell's area of effect is increased by 10 ft."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": "piercing",
+            "who": "you",
+            "when": "failedSave"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": null,
+            "who": "you",
+            "when": "failedSave"
+          }
+        ]
+      }
+    },
+    {
+      "table": 34,
+      "d10": 6,
+      "d6": 4,
+      "columns": {
+        "slashing": "Rend armor. Make a DC 14 Dexterity saving throw. On a failed save, if you are wearing leather armor, its effectiveness is reduced by 2.",
+        "piercing": "Internal bleeding. You take 1d6 damage at the beginning of your turn for the next 1d6 turns.",
+        "bludgeoning": "Strike! Triple damage, and you are knocked into another creature within 5 ft. of you. Both of you must make a DC 14 Dexterity saving throw. On a failed save, take 1d6 bludgeoning damage.",
+        "magical": "Lingering energy. Make a DC 14 Constitution saving throw. On a failed save, take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d6 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": "bludgeoning",
+            "who": "you",
+            "when": "failedSave"
+          },
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": "bludgeoning",
+            "who": "other",
+            "when": "failedSave"
+          }
+        ]
+      }
+    },
+    {
+      "table": 35,
+      "d10": 6,
+      "d6": 5,
+      "columns": {
+        "slashing": "Something slipped. Your AC is reduced by 1d6 for 1d6 rounds.",
+        "piercing": "Shish kebab. Triple damage and, if this was a melee attack, the weapon is lodged in your body.",
+        "bludgeoning": "Crushing blow. Make a DC 14 Dexterity saving throw. On a failed save, if you are wearing plate armor, its effectiveness is reduced by 2.",
+        "magical": "Spirit drain. Double damage, and the hit points lost from this attack cannot be healed, except by magic."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 36,
+      "d10": 6,
+      "d6": 6,
+      "columns": {
+        "slashing": "Wild swing. Any creature within 5 ft. of you and your attacker takes the same damage you took.",
+        "piercing": "Armor-piercing strike. Make a DC 14 Dexterity saving throw. On a failed save, if you are wearing chain or ring armor, its effectiveness is reduced by 2.",
+        "bludgeoning": "Staggered. Double damage, and all attacks against you have advantage for 1d6 rounds.",
+        "magical": "Crucible. Triple damage and roll a d6. 1-3: You are vulnerable to this damage type for 1 minute, 4: No effect, 5-6: You become resistant to this damage type for 1 minute."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "against": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 37,
+      "d10": 7,
+      "d6": 1,
+      "columns": {
+        "slashing": "Slashed ankles. Triple damage, and you are knocked prone. Make a DC 14 Constitution saving throw when attempting to get back up. On a failed save, you are unable to do so.",
+        "piercing": "Pinned. The attack pins your foot to the ground. Make a DC 14 Strength check to free yourself, taking an additional 1d6 damage with each failed attempt.",
+        "bludgeoning": "Right on the shins. You cannot take the Dash action for 1d6 rounds.",
+        "magical": "Erode. Your AC is reduced by 1d6 for 1d6 rounds."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 38,
+      "d10": 7,
+      "d6": 2,
+      "columns": {
+        "slashing": "Off form. You have disadvantage on melee attacks for 1d6 rounds.",
+        "piercing": "Something slipped. Triple damage, and your AC is reduced by 1d6 for 1d6 rounds.",
+        "bludgeoning": "Right on the shins. You cannot take the Dash action for 1d6 rounds.",
+        "magical": "Erode. Your AC is reduced by 1d6 for 1d6 rounds."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 39,
+      "d10": 7,
+      "d6": 3,
+      "columns": {
+        "slashing": "Sweep the legs. Make a DC 14 Dexterity saving throw. On a failed save, you are knocked prone.",
+        "piercing": "The thighs have it. Your speed is reduced by 10 ft. until you finish a short rest.",
+        "bludgeoning": "This little piggy... Triple damage, and your speed is reduced by 1/2 until you finish a short rest.",
+        "magical": "Big boom. If this attack deals force or thunder damage, you are knocked back 1d6 × 5 ft., taking 1d4 bludgeoning damage for each 5 ft. traveled, and you are knocked prone."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "-10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rest",
+              "rest": "short"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rest",
+              "rest": "short"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 40,
+      "d10": 7,
+      "d6": 4,
+      "columns": {
+        "slashing": "Sliced tendon. Your speed is reduced by 1/2 for 1d6 rounds.",
+        "piercing": "Whose heel? For the next 1d6 rounds, you must make a DC 14 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you fall prone.",
+        "bludgeoning": "Staggered. All attacks against you have advantage for 1d6 rounds.",
+        "magical": "Boom. Triple damage and, if this attack deals force or thunder damage, you are pushed back 2d4 × 5 ft."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "against": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 41,
+      "d10": 7,
+      "d6": 5,
+      "columns": {
+        "slashing": "Disarmed. Triple damage, and make a DC 14 Dexterity saving throw. On a failed save, drop your weapon.",
+        "piercing": "Pinned. The attack pins your arm to a wall, another target, or your own body. Make a DC 14 Strength check to free your arm, taking 1d6 damage with each failed attempt.",
+        "bludgeoning": "Crushed hand. You have disadvantage on skill checks that rely on your hands or arms until you finish a long rest.",
+        "magical": "Crackling energy. Your Dexterity modifier is reduced by 2 until you finish a short rest."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 42,
+      "d10": 7,
+      "d6": 6,
+      "columns": {
+        "slashing": "Weakening slash. You deal 1/2 damage on melee attacks for the next 1d6 rounds.",
+        "piercing": "Drop it! Drop what you are holding (the GM decides which hand, or determines randomly).",
+        "bludgeoning": "Rap on the knuckles. Triple damage, and you have disadvantage on Dexterity-based attacks for 1d6 rounds.",
+        "magical": "Sap strength. If this attack deals acid, poison, or necrotic damage, your Strength modifier is reduced by 4 until you finish a long rest."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "abilities": [
+              "dex"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "halfDamage",
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 43,
+      "d10": 8,
+      "d6": 1,
+      "columns": {
+        "slashing": "Off form. You have disadvantage on melee attacks for the next 1d6 rounds.",
+        "piercing": "Palm piercer. Triple damage, and you are unable to cast spells with a somatic component for 1d6 rounds.",
+        "bludgeoning": "Drop it! Drop what you are holding (the GM decides which hand, or determines randomly).",
+        "magical": "Brain fog. You cannot take reactions for 1d6 rounds."
+      },
+      "fx": {
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 44,
+      "d10": 8,
+      "d6": 2,
+      "columns": {
+        "slashing": "Follow-up. Your attacker may make 1 additional attack against you.",
+        "piercing": "Funny bone. You have disadvantage on Dexterity-based attacks for 1d6 rounds.",
+        "bludgeoning": "That'll buff out... If you are holding a shield, its effectiveness is reduced by 2.",
+        "magical": "Whispers of doom. Double damage, and you take a 1d6 penalty to your attack rolls for 1d6 rounds."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "abilities": [
+              "dex"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 45,
+      "d10": 8,
+      "d6": 3,
+      "columns": {
+        "slashing": "Not them! Quadruple damage, and make a DC 16 Wisdom saving throw. On a failed save, you become frightened of creatures of your attacker's type. Repeat this save each time you face creatures of this type until you have defeated 3d12 of them.",
+        "piercing": "Split lip. Quadruple damage, and spells with a verbal component have a 75% chance of failing until you are healed.",
+        "bludgeoning": "Stunning blow. Make a DC 16 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.",
+        "magical": "... Until 2d12 days have passed, you are unable to speak."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 46,
+      "d10": 8,
+      "d6": 4,
+      "columns": {
+        "slashing": "Double trouble. Reroll twice on the table and apply both effects.",
+        "piercing": "Double trouble. Reroll twice on the table and apply both effects.",
+        "bludgeoning": "Double trouble. Reroll twice on the table and apply both effects.",
+        "magical": "Double trouble. Reroll twice on the table and apply both effects."
+      }
+    },
+    {
+      "table": 47,
+      "d10": 8,
+      "d6": 5,
+      "columns": {
+        "slashing": "Hideous scar. You receive a permanent scar on your face, giving you advantage on Charisma (Intimidation) checks, and disadvantage on Charisma (Persuasion) checks.",
+        "piercing": "Feeling faint... You have disadvantage on Strength, Dexterity and Constitution-based rolls for 1d8 rounds. Additionally, you must make a DC 16 Constitution saving throw at the beginning of each of your turns. On a failed save, you fall prone.",
+        "bludgeoning": "Out for the count. Quadruple damage, and make a DC 16 Constitution saving throw. On a failed save, you are knocked unconscious.",
+        "magical": "We're all mad here... Quadruple damage and, if this attack deals psychic damage, you develop a form of short term madness (see Game Master's Guide)."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack",
+              "check",
+              "save"
+            ],
+            "abilities": [
+              "dex",
+              "str",
+              "con"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "save": {
+              "ability": "con",
+              "dc": 16,
+              "fail": "prone"
+            },
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 48,
+      "d10": 8,
+      "d6": 6,
+      "columns": {
+        "slashing": "Something slipped. Quadruple damage, and your AC is reduced by 1d8 for 1d8 rounds.",
+        "piercing": "Skewered. Quadruple damage, and you take 1d8 damage at the beginning of your turn for the next 1d8 turns.",
+        "bludgeoning": "...And stay down. You are pushed back 15 ft. Make a DC 16 Dexterity saving throw. On a failed save, you are knocked prone and take 1d6 damage.",
+        "magical": "Magical barrage. Two additional targets within range are affected, or the spell's area of effect is increased by 15 ft."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": null,
+            "who": "you",
+            "when": "failedSave"
+          }
+        ]
+      }
+    },
+    {
+      "table": 49,
+      "d10": 9,
+      "d6": 1,
+      "columns": {
+        "slashing": "Really took it out of you. The hit points lost from this attack cannot be recovered until you finish a long rest.",
+        "piercing": "Internal bleeding. Make a DC 16 Constitution saving throw. On a failed save, take an additional 1d8 piercing damage at the beginning of your turn for the next 1d8 rounds.",
+        "bludgeoning": "Staggered. Quadruple damage, and all attacks against you have advantage for 1d8 rounds.",
+        "magical": "Lingering energy. Quadruple damage, and make a DC 16 Constitution saving throw. On a failed save, take 1d8 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d8 rounds."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "against": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 50,
+      "d10": 9,
+      "d6": 2,
+      "columns": {
+        "slashing": "Off form. Quadruple damage, and you have disadvantage on melee attacks for the next 1d8 rounds.",
+        "piercing": "Something slipped. Quadruple damage, and your AC is reduced by 1d8 for 1d8 rounds.",
+        "bludgeoning": "This little piggy. Your speed is reduced by 1/2 until you finish a short rest.",
+        "magical": "Spirit drain. Triple damage, and the hit points lost from this attack cannot be healed, except by magic."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rest",
+              "rest": "short"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 51,
+      "d10": 9,
+      "d6": 3,
+      "columns": {
+        "slashing": "Open wound. For the next 1d8 rounds, you must make a DC 16 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you take 1d8 damage.",
+        "piercing": "Pinned. The attack pins your foot to the ground. Make a DC 16 Strength check to free yourself, taking an additional 1d8 damage with each failed attempt.",
+        "bludgeoning": "Kneecapped. Quadruple damage, and you have disadvantage on skill checks that rely on your legs until you finish a long rest.",
+        "magical": "Big boom. Quadruple damage and, if this attack deals force or thunder damage, you are knocked back 1d8 × 5 ft., taking 1d6 bludgeoning damage for each 5 ft. traveled, and you are knocked prone."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 52,
+      "d10": 9,
+      "d6": 4,
+      "columns": {
+        "slashing": "This little piggy… You lose a finger, giving you disadvantage on Dexterity (Sleight of Hand) checks, and other checks that require fine motor skills.",
+        "piercing": "Nasty infection. You must succeed on a DC 16 Constitution saving throw, or become poisoned in 1d4 hours.",
+        "bludgeoning": "Broken ribs. Whenever you attempt an action in combat, you must succeed on a DC 16 Constitution saving throw, or lose your action.",
+        "magical": "Ignition. You take 1d4 fire damage and are ignited. While ignited, you take 1d4 fire damage at the start of each of your turns. The fire can be put out as an action."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "poisoned",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "magical": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "fire",
+            "who": "you",
+            "when": "always"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": "fire",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 53,
+      "d10": 9,
+      "d6": 5,
+      "columns": {
+        "slashing": "Off form. Quadruple damage, and you have disadvantage on melee attacks for the next 1d8 rounds.",
+        "piercing": "Palm piercer. Quadruple damage, and you are unable to cast spells that rely on somatic elements, or to hold anything in one of your hands (GM decides which hand, or determines randomly), until you finish a short rest.",
+        "bludgeoning": "Mangler. Make a DC 16 Constitution saving throw. On a failed save, your Dexterity score is permanently reduced by 1.",
+        "magical": "Lingering energy. Make a DC 16 Constitution saving throw. On a failed save, take 1d8 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d8 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 54,
+      "d10": 9,
+      "d6": 6,
+      "columns": {
+        "slashing": "Weakening slash. You deal 1/2 damage on melee attacks for the next 1d8 rounds.",
+        "piercing": "Pinned. The attack pins your arm to a wall, another target, or your own body. Make a DC 16 Strength check to free your arm, taking 1d8 damage with each failed attempt.",
+        "bludgeoning": "Bad break. Quadruple damage, and you are unable to use your arm for 1d6 + 6 weeks (GM decides which arm, or determines randomly).",
+        "magical": "Sap strength. Quadruple damage and, if this attack deals acid, poison, or necrotic damage, your Strength score is permanently reduced by 1."
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "slashing": [
+          {
+            "type": "roll",
+            "rule": "halfDamage",
+            "scope": "melee",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 55,
+      "d10": 10,
+      "d6": 1,
+      "columns": {
+        "slashing": "Don't lose your head! Quadruple damage and, if the damage you take is equal to or greater than 1/2 of your maximum hit points, you are decapitated.",
+        "piercing": "Feeling faint... You have disadvantage on Strength, Dexterity and Constitution-based rolls for 1d10 rounds. Additionally, you must make a DC 18 Constitution saving throw at the beginning of each of your turns. On a failed save, you fall prone.",
+        "bludgeoning": "Who am I?! Make a DC 18 Constitution saving throw. On a failed save, you forget who you are and everything about yourself. You lose all of the benefits of your class, including abilities and spells.",
+        "magical": "Mind wipe. Make a DC 18 Wisdom saving throw. On a failed save, roll a d6, and you are permanently unable to see or hear… 1-2: Dwarves, 3-4: Elves, or 5-6: Halflings."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack",
+              "check",
+              "save"
+            ],
+            "abilities": [
+              "dex",
+              "str",
+              "con"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d10"
+            }
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "save": {
+              "ability": "con",
+              "dc": 18,
+              "fail": "prone"
+            },
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d10"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 56,
+      "d10": 10,
+      "d6": 2,
+      "columns": {
+        "slashing": "Heroic end. Maximum quadruple damage. If this attack kills you, all allies who can see you have advantage on their attacks for 1d10 rounds.",
+        "piercing": "Shot through the heart. Make a DC 18 Constitution saving throw. On a failed save, lose 1/4 of your maximum hit points at the end of your turn for 3 rounds.",
+        "bludgeoning": "Goodnight! Quadruple damage, and you are knocked unconscious.",
+        "magical": "Magical barrage. This attack deals maximum damage, and an additional target within range is affected, or the spell's area of effect is increased by 15 ft."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxQuadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "tick",
+            "at": "end",
+            "damage": "quarterMax",
+            "damageType": null,
+            "who": "you",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 57,
+      "d10": 10,
+      "d6": 3,
+      "columns": {
+        "slashing": "Nicked artery. Make a DC 18 Constitution saving throw. On a failed save, take 1d10 damage at the start of your turn for 1d10 rounds. If maximum damage is rolled, this effect continues for an additional 1d8 rounds (then 1d6, etc.)",
+        "piercing": "Damn this leg! Permanently, when entering combat, make a DC 12 Constitution saving throw. On a failed save, you have disadvantage on Strength and Dexterity-based attacks for 1d4 rounds.",
+        "bludgeoning": "Wide open. All enemies within range may make an attack of opportunity against you.",
+        "magical": "Epicenter. All creatures within 15 ft. of you are affected by the spell, or are affected again in the case of area effect spells."
+      }
+    },
+    {
+      "table": 58,
+      "d10": 10,
+      "d6": 4,
+      "columns": {
+        "slashing": "Disarmed. Make a DC 18 Dexterity saving throw. On a successful save, drop what you are holding (the GM decides which hand, or determines randomly). On a failed save, take quadruple damage and lose the hand.",
+        "piercing": "Something slipped. Quadruple damage, and your AC is reduced by 1d10 for 1d10 rounds.",
+        "bludgeoning": "Smashed hand. Make a DC 18 Strength saving throw. On a failed save, you are permanently unable to grasp with one of your hands (the GM decides which hand, or determines randomly).",
+        "magical": "Midas touch. Quadruple damage, and your hands are permanently imbued with magical energy. Every non-living thing you touch is affected as if by the damage type taken."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple",
+            "when": "choice"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d10"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 59,
+      "d10": 10,
+      "d6": 5,
+      "columns": {
+        "slashing": "Unhand me! You lose a hand. You can no longer hold anything with two hands, and can only hold a single object at a time.",
+        "piercing": "Eye opener. You lose an eye, giving you disadvantage on Wisdom (Perception) checks that rely on sight, and ranged attack rolls.",
+        "bludgeoning": "Dead leg. Your leg is smashed, and becomes broken beyond use. Your speed is halved, and you have disadvantage on ability checks and saving throws that use Strength and Dexterity.",
+        "magical": "Auditory annihilation. You are deafened. You automatically fail Wisdom (Perception) checks that rely on hearing."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "deafened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "bludgeoning": [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "check",
+              "save"
+            ],
+            "abilities": [
+              "str",
+              "dex"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "scope": "ranged",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "permanent"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "table": 60,
+      "d10": 10,
+      "d6": 6,
+      "columns": {
+        "slashing": "Vorpal strike. You must succeed on a DC 20 Dexterity saving throw, or be beheaded, and die.",
+        "piercing": "Heart piercer. You must succeed on a DC 20 Dexterity saving throw, or have your heart stabbed, and die.",
+        "bludgeoning": "Brain crusher. You must succeed on a DC 20 Dexterity saving throw, or have your head crushed, and die.",
+        "magical": "Arcane casualty. You must succeed on a DC 20 Dexterity saving throw, or be turned to dust, and die."
+      }
+    }
+  ]
+}

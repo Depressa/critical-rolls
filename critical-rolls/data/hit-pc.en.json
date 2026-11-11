@@ -1,0 +1,2940 @@
+{
+  "section": "hitPC",
+  "title": "Critical hits for players",
+  "source": "Critical Rolls (Game Master's Toolbox), Nord Games, pp. 30–39. Open Game Content under OGL 1.0a.",
+  "tiers": [
+    {
+      "label": "Setback",
+      "from": 1,
+      "to": 28
+    },
+    {
+      "label": "Dangerous",
+      "from": 29,
+      "to": 45
+    },
+    {
+      "label": "Life-Threatening",
+      "from": 46,
+      "to": 54
+    },
+    {
+      "label": "Deadly",
+      "from": 55,
+      "to": 60
+    }
+  ],
+  "entries": [
+    {
+      "table": 1,
+      "d10": 1,
+      "d6": 1,
+      "columns": {
+        "slashing": "Brow slash. Double damage, and the target is blinded until the end of its next turn.",
+        "piercing": "Pierced ear. Maximum damage.",
+        "bludgeoning": "Bashed nose. Double damage.",
+        "magical": "Magical barrage. Maximum damage, and an additional target within range is affected at half potency, or the spell's area of effect is increased by 5 ft."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 2,
+      "d10": 1,
+      "d6": 2,
+      "columns": {
+        "slashing": "Hit and hide. Maximum damage, and you can use your reaction to take the Hide action.",
+        "piercing": "Speed strike. Maximum damage, and you can use your reaction to make another attack.",
+        "bludgeoning": "Terrifying blow. Maximum damage, and one enemy within 30 feet of you is frightened of you until the end of its next turn.",
+        "magical": "Arcane advantage. Maximum damage, and you have advantage on your next spell attack roll."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 3,
+      "d10": 1,
+      "d6": 3,
+      "columns": {
+        "slashing": "Terrifying slash. Maximum damage, and the target must make a DC 12 Wisdom saving throw. On a failed save, it is frightened of you until the end of its next turn.",
+        "piercing": "With a sharp stick. Double damage, and the target must make a DC 12 Dexterity saving throw. On a failed save, it loses an eye (GM decides which one).",
+        "bludgeoning": "Bonk on the noggin. Maximum damage.",
+        "magical": "Spell storm. Double damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 4,
+      "d10": 1,
+      "d6": 4,
+      "columns": {
+        "slashing": "Slice to the cheek. Double damage.",
+        "piercing": "Right in the kisser. Maximum damage, and the target cannot speak for 1d4 rounds.",
+        "bludgeoning": "Nighty night! Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it is knocked unconscious.",
+        "magical": "Impact. Maximum damage."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 5,
+      "d10": 1,
+      "d6": 5,
+      "columns": {
+        "slashing": "Bloodied nose. Maximum damage.",
+        "piercing": "Neck wound. Double damage.",
+        "bludgeoning": "Stunning blow. Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it is stunned.",
+        "magical": "Spell drain. Double damage, and the target must make a DC 12 saving throw, using its spellcasting ability. On a failed save, it is unable to cast spells on its next turn."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 6,
+      "d10": 1,
+      "d6": 6,
+      "columns": {
+        "slashing": "Vexing cut. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it cannot take reactions until the end of your next turn.",
+        "piercing": "Between the shoulders. Maximum damage.",
+        "bludgeoning": "Gut punch. Double damage.",
+        "magical": "Guiding attack. Maximum damage, and the target has disadvantage on saving throws against your spells for 1d4 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 7,
+      "d10": 2,
+      "d6": 1,
+      "columns": {
+        "slashing": "Follow-up. Maximum damage, and you may make another attack against the same target.",
+        "piercing": "Press the advantage. Double damage and, if this was a melee attack, you can make a DC 16 Strength (Athletics) check to increase this to triple damage.",
+        "bludgeoning": "Winded. Maximum damage.",
+        "magical": "Bombardment. Double damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "crit",
+            "mode": "triple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 8,
+      "d10": 2,
+      "d6": 2,
+      "columns": {
+        "slashing": "Nave to chops. Double damage.",
+        "piercing": "Follow-up. Maximum damage, and you may make another attack with disadvantage against the same target.",
+        "bludgeoning": "Soften 'em up. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it has disadvantage on saving throws until the end of its next turn.",
+        "magical": "Precise magic. Maximum damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 9,
+      "d10": 2,
+      "d6": 3,
+      "columns": {
+        "slashing": "Slash to the ribs. Maximum damage.",
+        "piercing": "Poke in the belly. Double damage.",
+        "bludgeoning": "Get back! Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it is pushed back 5 ft.",
+        "magical": "Terrifying display. Double damage, and all enemies that can see you must make a DC 12 Wisdom saving throw. On a failed save, they are frightened of you until the end of your next turn."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 10,
+      "d10": 2,
+      "d6": 4,
+      "columns": {
+        "slashing": "Outmaneuver. Maximum damage, and you can use your reaction to take the Disengage action.",
+        "piercing": "Pinned. Maximum damage, and the target's speed is reduced to 0 until the end of its next turn.",
+        "bludgeoning": "Butterfingers. Maximum damage and, if the target is wielding a weapon, it drops it.",
+        "magical": "Discombobulated. Maximum damage, and the target cannot take reactions until the end of its next turn."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "zero",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 11,
+      "d10": 2,
+      "d6": 5,
+      "columns": {
+        "slashing": "Sliced tendon. Double damage, and the target's speed is reduced by 1/2 until the end of its next turn.",
+        "piercing": "In the knee. Maximum damage.",
+        "bludgeoning": "Low blow. Double damage.",
+        "magical": "Surge of power. Maximum damage, and you can immediately cast the same spell against the same target, expending a spell slot as normal."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 12,
+      "d10": 2,
+      "d6": 6,
+      "columns": {
+        "slashing": "Sweep the legs. Maximum damage, and the target must make a DC 12 Dexterity saving throw. On a failed save, it is knocked prone.",
+        "piercing": "Pinned. Double damage, and the target is pinned to the ground and becomes restrained.",
+        "bludgeoning": "Shin bash. Maximum damage.",
+        "magical": "Blast of power. Double damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 13,
+      "d10": 3,
+      "d6": 1,
+      "columns": {
+        "slashing": "Calf slash. Double damage.",
+        "piercing": "Target practice. Maximum damage, and any enemy of the target within range may make an attack of opportunity with disadvantage against it.",
+        "bludgeoning": "...And stay down. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it is knocked prone.",
+        "magical": "Targeted spell. Maximum damage."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 14,
+      "d10": 3,
+      "d6": 2,
+      "columns": {
+        "slashing": "Low slash. Maximum damage.",
+        "piercing": "Pierced thigh. Double damage.",
+        "bludgeoning": "Something slipped. Maximum damage, and the target's AC is reduced by 1d4 until the end of its next turn.",
+        "magical": "Big boom. Double damage. If this attack deals force or thunder damage, and if the target is Large or smaller, it is pushed back 1d4 × 5 ft., taking 1d6 bludgeoning damage for every 5 ft. traveled."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 15,
+      "d10": 3,
+      "d6": 3,
+      "columns": {
+        "slashing": "Slow recovery. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it can make one less attack on its next turn.",
+        "piercing": "Shoulder jab. Maximum damage.",
+        "bludgeoning": "Rap on the knuckles. Double damage.",
+        "magical": "Resistance is futile. Maximum damage and, if the target is resistant to this damage type, it loses that resistance for 1 minute."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 16,
+      "d10": 3,
+      "d6": 4,
+      "columns": {
+        "slashing": "You get what you pay for. Maximum damage, and you and the target must make a contested Strength check. If the target loses, its weapon is partially broken and deals 1/2 damage until it is repaired.",
+        "piercing": "Distracting jab. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it has disadvantage on its next attack.",
+        "bludgeoning": "Battered shoulder. Maximum damage.",
+        "magical": "Eruption. Double damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            },
+            "uses": 1
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 17,
+      "d10": 3,
+      "d6": 5,
+      "columns": {
+        "slashing": "Forearm blow. Double damage.",
+        "piercing": "Find an opening. Maximum damage, and you have advantage on your next attack against the target.",
+        "bludgeoning": "Drop it! Double damage, and the target must make a DC 12 Strength or Dexterity saving throw. On a failed save, it drops what it is holding (GM decides which hand, or determines randomly).",
+        "magical": "Onslaught. Maximum damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 18,
+      "d10": 3,
+      "d6": 6,
+      "columns": {
+        "slashing": "Slashed shoulder. Maximum damage.",
+        "piercing": "Pierced hand. Double damage.",
+        "bludgeoning": "Bruised joints. Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, it has disadvantage on its next melee attack.",
+        "magical": "Didn't want it anyway... Double damage, and a non-magical item the target is holding or wearing is also affected by the damage type of the spell."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            },
+            "scope": "melee",
+            "uses": 1
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 19,
+      "d10": 4,
+      "d6": 1,
+      "columns": {
+        "slashing": "Brow slash. Triple damage, and the target is blinded for 1d4 + 1 rounds.",
+        "piercing": "Pierced ear. Maximum damage, and roll the damage dice again.",
+        "bludgeoning": "Bashed nose. Triple damage.",
+        "magical": "Magical barrage. Maximum damage, and two additional targets within range are affected at half potency, or the spell's area of effect is increased by 10 ft."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 20,
+      "d10": 4,
+      "d6": 2,
+      "columns": {
+        "slashing": "Bob and weave. Maximum damage, and you can use your reaction to take the Dodge action.",
+        "piercing": "Internal Injury. Maximum damage, and the target of your attack cannot take a bonus action on its next turn.",
+        "bludgeoning": "Shield breaker. Maximum damage and, if the target is wielding a shield, it is destroyed.",
+        "magical": "Siphon life. Maximum damage, and you regain hit points equal to half the damage dealt."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 21,
+      "d10": 4,
+      "d6": 3,
+      "columns": {
+        "slashing": "Terrifying slash. Maximum damage, and the target must make a DC 14 Wisdom saving throw. On a failed save, it is frightened of you for 2d4 rounds.",
+        "piercing": "With a sharp stick. Triple damage, and the target must make a DC 14 Dexterity saving throw. On a failed save, it loses an eye (GM decides which one).",
+        "bludgeoning": "Bonk on the noggin. Maximum damage, and roll the damage dice again.",
+        "magical": "Spell storm. Triple damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 22,
+      "d10": 4,
+      "d6": 4,
+      "columns": {
+        "slashing": "Helping hand. Maximum damage, and you can use your reaction to take the Help action.",
+        "piercing": "Set up. Maximum damage, and your next attack against the target has advantage.",
+        "bludgeoning": "Weak spot. Maximum damage, and your next attack against the target deals an additional 3d6 damage.",
+        "magical": "Arcane recovery. Maximum damage, and you regain a spell slot the level of which is half or less of the spell you cast, minimum 1st."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+3d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 23,
+      "d10": 4,
+      "d6": 5,
+      "columns": {
+        "slashing": "Slice to the cheek. Triple damage.",
+        "piercing": "Right in the kisser. Maximum damage, and the target cannot speak for 2d4 rounds.",
+        "bludgeoning": "Nighty night! Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it is knocked unconscious.",
+        "magical": "Impact. Maximum damage, and roll the damage dice again."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 24,
+      "d10": 4,
+      "d6": 6,
+      "columns": {
+        "slashing": "Bloodied nose. Maximum damage, and roll the damage dice again.",
+        "piercing": "Neck wound. Triple damage.",
+        "bludgeoning": "Stunning blow. Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it is stunned.",
+        "magical": "Spell drain. Triple damage, and the target must make a DC 14 saving throw, using its spellcasting ability. On a failed save, it is unable to cast spells for 1d4 + 1 rounds."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 25,
+      "d10": 5,
+      "d6": 1,
+      "columns": {
+        "slashing": "Vexing cut. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it cannot take reactions for 2d4 rounds.",
+        "piercing": "Between the shoulders. Maximum damage, and roll the damage dice again.",
+        "bludgeoning": "Gut punch. Triple damage.",
+        "magical": "Guiding attack. Maximum damage, and the target has disadvantage on saving throws against your spells for 2d4 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 26,
+      "d10": 5,
+      "d6": 2,
+      "columns": {
+        "slashing": "Follow-up. Maximum damage, and you may make another attack with advantage against the same target.",
+        "piercing": "Press the advantage. Triple damage and, if this was a melee attack, you can make a DC 14 Strength (Athletics) check to increase this to quadruple damage.",
+        "bludgeoning": "Winded. Maximum damage, and roll the damage dice again.",
+        "magical": "Bombardment. Triple damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "crit",
+            "mode": "quadruple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 27,
+      "d10": 5,
+      "d6": 3,
+      "columns": {
+        "slashing": "Nave to chops. Triple damage.",
+        "piercing": "Follow-up. Maximum damage, and you may make another attack against the same target.",
+        "bludgeoning": "Soften 'em up. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it has disadvantage on saving throws for 1d4 + 1 rounds.",
+        "magical": "Precise magic. Maximum damage, and roll the damage dice again."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 28,
+      "d10": 5,
+      "d6": 4,
+      "columns": {
+        "slashing": "Slash to the ribs. Maximum damage, and roll the damage dice again.",
+        "piercing": "Poke in the belly. Triple damage.",
+        "bludgeoning": "Get back! Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it is pushed back 10 ft.",
+        "magical": "Terrifying display. Triple damage, and all enemies that can see you must make a DC 14 Wisdom saving throw. On a failed save, they are frightened of you for 1d4 + 1 rounds."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 29,
+      "d10": 5,
+      "d6": 5,
+      "columns": {
+        "slashing": "Sliced tendon. Triple damage, and the target's speed is reduced to 5 ft. until the end of its next turn.",
+        "piercing": "In the knee. Maximum damage, and roll the damage dice again.",
+        "bludgeoning": "Low blow. Triple damage.",
+        "magical": "Surge of power. Maximum damage, and you can immediately cast the same spell against any target within range, expending a spell slot as normal."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 30,
+      "d10": 5,
+      "d6": 6,
+      "columns": {
+        "slashing": "Sweep the legs. Maximum damage, and the target must make a DC 14 Dexterity saving throw. On a failed save, it is knocked prone.",
+        "piercing": "Pinned. Triple damage, and the target is pinned to the ground and becomes restrained.",
+        "bludgeoning": "Shin bash. Maximum damage, and roll the damage dice again.",
+        "magical": "Blast of power. Triple damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 31,
+      "d10": 6,
+      "d6": 1,
+      "columns": {
+        "slashing": "Calf slash. Triple damage.",
+        "piercing": "Target practice. Maximum damage, and any enemy of the target within range may make an attack of opportunity against it.",
+        "bludgeoning": "...And stay down. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it is knocked prone.",
+        "magical": "Targeted spell. Maximum damage, and roll the damage dice again."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 32,
+      "d10": 6,
+      "d6": 2,
+      "columns": {
+        "slashing": "Low slash. Maximum damage, and roll the damage dice again.",
+        "piercing": "Pierced thigh. Triple damage.",
+        "bludgeoning": "Something slipped. Maximum damage, and the target's AC is reduced by 2d4 until the end of its next turn.",
+        "magical": "Big boom. Triple damage. If this attack deals force or thunder damage, and the target is Large or smaller, it is pushed back 2d4 × 5 ft., taking 1d6 bludgeoning damage for every 5 ft. traveled."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 33,
+      "d10": 6,
+      "d6": 3,
+      "columns": {
+        "slashing": "Slow recovery. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it can make two fewer attacks on its next turn.",
+        "piercing": "Shoulder jab. Maximum damage, and roll the damage dice again.",
+        "bludgeoning": "Rap on the knuckles. Triple damage.",
+        "magical": "Resistance is futile. Maximum damage and, if the target is resistant to this damage type, it loses that resistance for 1 minute. If the target is not resistant, it becomes vulnerable to this damage type for 1 minute."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 34,
+      "d10": 6,
+      "d6": 4,
+      "columns": {
+        "slashing": "You get what you pay for. Maximum damage, and you and the target must make a contested Strength check. If the target loses, its weapon is partially broken and deals 1/4 damage until it is repaired.",
+        "piercing": "Distracting jab. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it has disadvantage on attacks for 1d4 + 1 rounds.",
+        "bludgeoning": "Battered shoulder. Maximum damage, and roll the damage dice again.",
+        "magical": "Eruption. Triple damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 35,
+      "d10": 6,
+      "d6": 5,
+      "columns": {
+        "slashing": "Slashed shoulder. Maximum damage, and roll the damage dice again.",
+        "piercing": "Pierced hand. Triple damage.",
+        "bludgeoning": "Bruised joints. Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, it has disadvantage on attacks for 1d4 + 1 rounds.",
+        "magical": "Didn't want it anyway... Triple damage, and two non-magical items the target is holding or wearing are also affected by the damage type of the spell."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 36,
+      "d10": 6,
+      "d6": 6,
+      "columns": {
+        "slashing": "Forearm blow. Triple damage.",
+        "piercing": "Find an opening. Maximum damage, and you have advantage on attacks against the target for 1d4 + 1 rounds.",
+        "bludgeoning": "Drop it! Triple damage, and the target must make a DC 14 Strength or Dexterity saving throw. On a failed save, it drops what it is holding (GM decides which hand, or determines randomly).",
+        "magical": "Onslaught. Maximum damage, and roll the damage dice again."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 37,
+      "d10": 7,
+      "d6": 1,
+      "columns": {
+        "slashing": "Brow slash. Quadruple damage, and the target is blinded for 3d4 + 2 rounds.",
+        "piercing": "Pierced ear. Maximum double damage.",
+        "bludgeoning": "Bashed nose. Quadruple damage.",
+        "magical": "Magical barrage. Maximum damage, and 3 additional targets within range are affected at half potency, or the spell's area of effect is increased by 15 ft."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "3d4+2"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 38,
+      "d10": 7,
+      "d6": 2,
+      "columns": {
+        "slashing": "Terrifying slash. Maximum damage, and the target must make a DC 16 Wisdom saving throw. On a failed save, it is frightened of you for 3d4 rounds.",
+        "piercing": "With a sharp stick. Quadruple damage, and the target must make a DC 16 Dexterity saving throw. On a failed save, it loses an eye (GM decides which one).",
+        "bludgeoning": "Bonk on the noggin. Maximum double damage.",
+        "magical": "Spell storm. Quadruple damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "3d4"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 39,
+      "d10": 7,
+      "d6": 3,
+      "columns": {
+        "slashing": "Slice to the cheek. Quadruple damage.",
+        "piercing": "Right in the kisser. Maximum damage, and the target cannot speak for 3d4 rounds.",
+        "bludgeoning": "Nighty night! Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it is knocked unconscious.",
+        "magical": "Impact. Maximum double damage."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 40,
+      "d10": 7,
+      "d6": 4,
+      "columns": {
+        "slashing": "Bloodied nose. Maximum double damage.",
+        "piercing": "Neck wound. Quadruple damage.",
+        "bludgeoning": "Stunning blow. Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it is stunned.",
+        "magical": "Spell drain. Quadruple damage, and the target must make a DC 16 saving throw using its spellcasting ability. On a failed save, it is unable to cast spells for 3d4 rounds."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 41,
+      "d10": 7,
+      "d6": 5,
+      "columns": {
+        "slashing": "Vexing cut. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it cannot take reactions for 3d4 rounds.",
+        "piercing": "Between the shoulders. Maximum double damage.",
+        "bludgeoning": "Gut punch. Quadruple damage.",
+        "magical": "Guiding attack. Maximum damage, and the target has disadvantage on saving throws against your spells for 3d4 rounds."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 42,
+      "d10": 7,
+      "d6": 6,
+      "columns": {
+        "slashing": "Follow-up. Maximum damage, and you may make another attack.",
+        "piercing": "Press the advantage. Quadruple damage and, if this was a melee attack, you can make a DC 16 Strength (Athletics) check to increase this to quintuple damage.",
+        "bludgeoning": "Winded. Maximum double damage.",
+        "magical": "Bombardment. Quadruple damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "crit",
+            "mode": "quintuple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 43,
+      "d10": 8,
+      "d6": 1,
+      "columns": {
+        "slashing": "Nave to chops. Quadruple damage.",
+        "piercing": "Follow-up. Maximum damage, and you may make another attack with advantage against the same target.",
+        "bludgeoning": "Soften 'em up. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it has disadvantage on saving throws for 2d4 + 2 rounds.",
+        "magical": "Precise magic. Maximum double damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 44,
+      "d10": 8,
+      "d6": 2,
+      "columns": {
+        "slashing": "Slash to the ribs. Maximum double damage.",
+        "piercing": "Poke in the belly. Quadruple damage.",
+        "bludgeoning": "Get back! Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it is pushed back 15 ft.",
+        "magical": "Terrifying display. Quadruple damage, and all enemies that can see you must make a DC 16 Wisdom saving throw. On a failed save, they are frightened of you for 2d4 + 2 rounds."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 45,
+      "d10": 8,
+      "d6": 3,
+      "columns": {
+        "slashing": "Sliced tendon. Quadruple damage, and the target's speed is reduced to 0 ft. until the end of its next turn.",
+        "piercing": "In the knee. Maximum double damage.",
+        "bludgeoning": "Low blow. Quadruple damage.",
+        "magical": "Surge of power. Maximum damage, and you can immediately cast the same spell against any target within range. This second attack does not expend a spell slot."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "zero",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 46,
+      "d10": 8,
+      "d6": 4,
+      "columns": {
+        "slashing": "Sweep the legs. Maximum damage, and the target must make a DC 16 Dexterity saving throw. On a failed save, it is knocked prone.",
+        "piercing": "Pinned. Quadruple damage, and the target is pinned to the ground and becomes restrained.",
+        "bludgeoning": "Shin bash. Maximum double damage.",
+        "magical": "Blast of power. Quadruple damage."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 47,
+      "d10": 8,
+      "d6": 5,
+      "columns": {
+        "slashing": "Calf slash. Quadruple damage.",
+        "piercing": "Target practice. Maximum damage, and any enemy of the target within range may make an attack of opportunity with advantage against it.",
+        "bludgeoning": "...And stay down. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it is knocked prone.",
+        "magical": "Targeted spell. Maximum double damage."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 48,
+      "d10": 8,
+      "d6": 6,
+      "columns": {
+        "slashing": "Low slash. Maximum double damage.",
+        "piercing": "Pierced thigh. Quadruple damage.",
+        "bludgeoning": "Something slipped. Maximum damage, and the target's AC is reduced by 3d4 until the end of its next turn.",
+        "magical": "Big boom. Quadruple damage. If this attack deals force or thunder damage, and the target is Large or smaller, it is pushed back 3d4 × 5 ft., taking 1d6 bludgeoning damage for every 5 ft. traveled."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-3d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 49,
+      "d10": 9,
+      "d6": 1,
+      "columns": {
+        "slashing": "Slow recovery. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it can make three fewer attacks on its next turn.",
+        "piercing": "Shoulder jab. Maximum double damage.",
+        "bludgeoning": "Rap on the knuckles. Quadruple damage.",
+        "magical": "Resistance is futile. Maximum damage, and the target becomes vulnerable to this damage type for 1 minute."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 50,
+      "d10": 9,
+      "d6": 2,
+      "columns": {
+        "slashing": "You get what you pay for. Maximum damage, and you and the target must make a contested Strength check. If the target loses, its weapon is broken.",
+        "piercing": "Distracting jab. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it has disadvantage on attacks for 2d4 + 2 rounds.",
+        "bludgeoning": "Battered shoulder. Maximum double damage.",
+        "magical": "Eruption. Quadruple damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 51,
+      "d10": 9,
+      "d6": 3,
+      "columns": {
+        "slashing": "Forearm blow. Quadruple damage.",
+        "piercing": "Find an opening. Maximum damage, and you have advantage on attacks against the target for 2d4 + 2 rounds.",
+        "bludgeoning": "Drop it! Quadruple damage, and the target must make a DC 16 Strength or Dexterity saving throw. On a failed save, it drops what it is holding (GM decides which hand, or determines randomly).",
+        "magical": "Onslaught. Maximum double damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 52,
+      "d10": 9,
+      "d6": 4,
+      "columns": {
+        "slashing": "Commanding presence. Maximum damage, and you can use your reaction to inspire one ally within 30 feet who can hear you. The ally can use their reaction to make one weapon attack.",
+        "piercing": "Join the fray. Maximum damage, and you can use your reaction to encourage an ally within 30 feet who can hear you. The ally can use their reaction to move up to its speed toward you.",
+        "bludgeoning": "Get out of dodge. Maximum damage, and you can use your reaction to prompt an ally within 30 feet who can hear you. The ally can use their reaction to take the Disengage action and move up to half their speed.",
+        "magical": "Complimentary casting. Maximum damage, and you can use your reaction to empower one ally within 30 feet who can hear you. The ally can use their reaction to cast a spell."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 53,
+      "d10": 9,
+      "d6": 5,
+      "columns": {
+        "slashing": "Momentum. Maximum damage, and your speed is increased by 10 feet for 1d6 turns.",
+        "piercing": "Armor piercing. Maximum damage and, if the target is wearing armor, the AC that armor provides is reduced by 2.",
+        "bludgeoning": "Blade breaker. Maximum damage and, if the target is wielding a weapon, that weapon is destroyed.",
+        "magical": "Unpredictable invisibility. Maximum damage, and you turn invisible until the end of your next turn."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "invisible",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "+10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "other",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 54,
+      "d10": 9,
+      "d6": 6,
+      "columns": {
+        "slashing": "Slashed shoulder. Maximum double damage.",
+        "piercing": "Pierced hand. Quadruple damage.",
+        "bludgeoning": "Bruised joints. Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, it has disadvantage on attacks for 2d4 + 2 rounds.",
+        "magical": "Didn't want it anyway... Quadruple damage, and three items the target is holding or wearing are also affected by the damage type of the spell."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 55,
+      "d10": 10,
+      "d6": 1,
+      "columns": {
+        "slashing": "Cleave. Maximum damage and, if the damage kills the target, any damage that would reduce the target below 0 hit points is applied to another target of your choice within range.",
+        "piercing": "Grievous wound. Maximum damage, and the target cannot take an action on its next turn.",
+        "bludgeoning": "Seeing stars. Maximum damage, and the target is stunned until the end of its next turn.",
+        "magical": "Replenished arcana. Maximum damage, and you regain the spell slot you used to cast this spell."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 56,
+      "d10": 10,
+      "d6": 2,
+      "columns": {
+        "slashing": "Don't lose your head! Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of its maximum hit points, it is decapitated.",
+        "piercing": "Pressure point. Quadruple damage, and the target must make a DC 18 Constitution saving throw. On a failed save, it is paralyzed.",
+        "bludgeoning": "Nighty night! Quadruple damage and, if the damage the target takes is equal to or greater than 1/4 of its maximum hit points, it is knocked unconscious.",
+        "magical": "Rejuvenation. Quadruple damage, and you regain a spell slot. Roll a d6 to determine the level of the spell slot."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "paralyzed",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 57,
+      "d10": 10,
+      "d6": 3,
+      "columns": {
+        "slashing": "Gutted. Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of its maximum hit points, it is disemboweled.",
+        "piercing": "Shot through the heart. Quadruple damage, and the target loses 1/4 of its maximum hit points at the beginning of its turn for 3 rounds.",
+        "bludgeoning": "Tenderizer. Quadruple damage, and the target becomes vulnerable to bludgeoning damage for 1 minute.",
+        "magical": "Detonation. Quadruple damage, and all creatures within 15 ft. of the target are also affected."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "quarterMax",
+            "damageType": null,
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "3"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 58,
+      "d10": 10,
+      "d6": 4,
+      "columns": {
+        "slashing": "I never touched a drop! Quadruple damage and, if the damage the target takes is equal to or greater than 1/4 of its maximum hit points, it loses a leg.",
+        "piercing": "Chink in the armor. Quadruple damage, and the target becomes vulnerable to piercing damage for 1 minute.",
+        "bludgeoning": "Shattered knee. Quadruple damage, and the target's speed is reduced by 1/2. Additionally, for every 5 ft. the target moves, it takes 1d6 damage.",
+        "magical": "Blink and you'll miss it. Quadruple damage, and the target must make a DC 18 Wisdom saving throw. On a failed save, it is unable to see you for 1 minute."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 59,
+      "d10": 10,
+      "d6": 5,
+      "columns": {
+        "slashing": "Disarmed. Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of its maximum hit points, it loses an arm/hand.",
+        "piercing": "Distracting jab. Quadruple damage, and the target has disadvantage on attacks until the end of the encounter.",
+        "bludgeoning": "Crushed hand. Quadruple damage, and the target loses use of one of its arms or hands.",
+        "magical": "Terrifying display. Quadruple damage, and all enemies that can see you must make a DC 18 Wisdom saving throw. On a failed save, they are frightened of you. An enemy can repeat this saving throw at the end of its turn to stop being frightened."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 60,
+      "d10": 10,
+      "d6": 6,
+      "columns": {
+        "slashing": "Hit and run. Quadruple damage, and you can use your reaction to take the Dash action.",
+        "piercing": "Hit and hurt. Quadruple damage, and the target of your attack bleeds out, losing 1d4 hit points at the start of its turn for 1d6 turns.",
+        "bludgeoning": "Hit and hold. Quadruple damage, and you can use your reaction to attempt to grapple the target.",
+        "magical": "Hit and harm. Quadruple damage, and the target of your attack takes an additional 3d4 force damage."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": null,
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "damage",
+            "formula": "3d4",
+            "damageType": "force",
+            "who": "other",
+            "when": "always"
+          }
+        ]
+      }
+    }
+  ]
+}

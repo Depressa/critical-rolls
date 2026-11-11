@@ -1,0 +1,30 @@
+{
+  "id": "critical-rolls",
+  "title": "Critical Rolls",
+  "description": "Автоматическое отслеживание натуральных 1 и 20 в D&D 5e: кто бросил, что выпало и какой раздел «Критических бросков» применим.",
+  "version": "0.5.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [{ "name": "Depressa" }],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": { "minimum": "5.3.0" }
+      }
+    ]
+  },
+  "socket": true,
+  "esmodules": ["scripts/main.mjs"],
+  "styles": ["styles/critical-rolls.css"],
+  "languages": [
+    { "lang": "ru", "name": "Русский", "path": "lang/ru.json" },
+    { "lang": "en", "name": "English", "path": "lang/en.json" }
+  ],
+  "url": "https://github.com/Depressa/critical-rolls",
+  "manifest": "https://raw.githubusercontent.com/Depressa/critical-rolls/main/critical-rolls/module.json",
+  "download": "https://github.com/Depressa/critical-rolls/releases/latest/download/critical-rolls.zip"
+}

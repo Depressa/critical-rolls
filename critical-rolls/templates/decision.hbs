@@ -1,0 +1,12 @@
+<section>
+  <fieldset>
+    <legend>{{localize "CRITROLLS.Dialog.Effect"}}</legend>
+    {{#each choices}}
+    <label class="cr-choice">
+      <span class="cr-text">{{label}}</span>
+      {{#unless single}}<input type="radio" name="choice" value="{{value}}" {{#if checked}}checked{{/if}}>{{/unless}}
+    </label>
+    {{/each}}
+    {{#if hint}}<p class="hint">{{hint}}</p>{{/if}}
+  </fieldset>
+</section>

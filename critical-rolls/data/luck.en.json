@@ -1,0 +1,1161 @@
+{
+  "section": "luck",
+  "title": "Good luck effects",
+  "source": "Critical Rolls (Game Master's Toolbox), Nord Games, pp. 45–47. Open Game Content under OGL 1.0a.",
+  "entries": [
+    {
+      "table": 1,
+      "d10": 1,
+      "d6": 1,
+      "variants": [
+        "Succeed on an attack roll.",
+        "Find a shortcut or concealed door."
+      ]
+    },
+    {
+      "table": 2,
+      "d10": 1,
+      "d6": 2,
+      "variants": [
+        "Reroll an attack roll.",
+        "You succeed on a death saving throw."
+      ]
+    },
+    {
+      "table": 3,
+      "d10": 1,
+      "d6": 3,
+      "variants": [
+        "Advantage on an attack roll.",
+        "You discover a creature's flaw, weakness, vulnerability, or resistance."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 4,
+      "d10": 1,
+      "d6": 4,
+      "variants": [
+        "+1d4 on an attack roll.",
+        "An old contact helps you out."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 5,
+      "d10": 1,
+      "d6": 5,
+      "variants": [
+        "+1d6 on an attack roll.",
+        "You remember pertinent information that is helpful in your current situation."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 6,
+      "d10": 1,
+      "d6": 6,
+      "variants": [
+        "+1d8 on an attack roll.",
+        "A creature breaks or loses a piece of equipment."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 7,
+      "d10": 2,
+      "d6": 1,
+      "variants": [
+        "+1d10 on an attack roll.",
+        "Successfully disarm a trap."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 8,
+      "d10": 2,
+      "d6": 2,
+      "variants": [
+        "+1d12 on an attack roll.",
+        "A creature of your choice falls prone."
+      ],
+      "auto": [
+        [],
+        [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 9,
+      "d10": 2,
+      "d6": 3,
+      "variants": [
+        "Turn a hit against you into a miss.",
+        "Automatically unlock a mundane lock."
+      ]
+    },
+    {
+      "table": 10,
+      "d10": 2,
+      "d6": 4,
+      "variants": [
+        "Succeed an ability check.",
+        "You impress someone you are trying to get on your side."
+      ]
+    },
+    {
+      "table": 11,
+      "d10": 2,
+      "d6": 5,
+      "variants": [
+        "Choose your place in initiative order.",
+        "A creature of your choice is momentarily distracted."
+      ]
+    },
+    {
+      "table": 12,
+      "d10": 2,
+      "d6": 6,
+      "variants": [
+        "Deal maximum damage on an attack.",
+        "+1d20 to a Charisma-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 13,
+      "d10": 3,
+      "d6": 1,
+      "variants": [
+        "You move through an enemy's space without provoking an opportunity attack.",
+        "Successfully break down a mundane door."
+      ]
+    },
+    {
+      "table": 14,
+      "d10": 3,
+      "d6": 2,
+      "variants": [
+        "A creature becomes stunned after attacking you.",
+        "A person you interact with instantly takes a liking to you."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "save"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "save"
+            ],
+            "uses": 1,
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "table": 15,
+      "d10": 3,
+      "d6": 3,
+      "variants": [
+        "Reroll an ability check.",
+        "The GM gives you a hint or clue for how to approach a problem."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 16,
+      "d10": 3,
+      "d6": 4,
+      "variants": [
+        "Reroll a saving throw.",
+        "Recover materials or ingredients that would otherwise be consumed."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 17,
+      "d10": 3,
+      "d6": 5,
+      "variants": [
+        "You gain the benefits of a long rest after a short rest.",
+        "You recover a level of exhaustion after a short rest."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 18,
+      "d10": 3,
+      "d6": 6,
+      "variants": [
+        "+1d4 to an ability check.",
+        "You gain insight into how a spell, trap, or device works."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 19,
+      "d10": 4,
+      "d6": 1,
+      "variants": [
+        "+1d6 to an ability check.",
+        "You convince a creature that you are an expert in a skill of your choice."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 20,
+      "d10": 4,
+      "d6": 2,
+      "variants": [
+        "+1d8 to an ability check.",
+        "Deal double damage on an attack."
+      ]
+    },
+    {
+      "table": 21,
+      "d10": 4,
+      "d6": 3,
+      "variants": [
+        "+1d10 to an ability check.",
+        "You may take an additional non-attack action on your turn."
+      ]
+    },
+    {
+      "table": 22,
+      "d10": 4,
+      "d6": 4,
+      "variants": [
+        "+1d12 to an ability check.",
+        "You are able to accomplish a task without a tool that would normally be required."
+      ]
+    },
+    {
+      "table": 23,
+      "d10": 4,
+      "d6": 5,
+      "variants": [
+        "Add double your proficiency bonus to an ability check, whether or not you are proficient.",
+        "+1d20 to an ability check."
+      ]
+    },
+    {
+      "table": 24,
+      "d10": 4,
+      "d6": 6,
+      "variants": [
+        "Your attack strikes both your target and an adjacent creature.",
+        "Advantage on an ability check."
+      ],
+      "auto": [
+        [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 25,
+      "d10": 5,
+      "d6": 1,
+      "variants": [
+        "Succeed on a saving throw.",
+        "You manage to avoid detection by one creature."
+      ]
+    },
+    {
+      "table": 26,
+      "d10": 5,
+      "d6": 2,
+      "variants": [
+        "Advantage on a saving throw.",
+        "Give an ally advantage on a saving throw."
+      ],
+      "auto": [
+        [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 27,
+      "d10": 5,
+      "d6": 3,
+      "variants": [
+        "+1d4 to a saving throw.",
+        "You are able to improvise a tool or piece of equipment for your purpose."
+      ]
+    },
+    {
+      "table": 28,
+      "d10": 5,
+      "d6": 4,
+      "variants": [
+        "+1d6 to a saving throw.",
+        "You see through a trick, lie, or illusion."
+      ]
+    },
+    {
+      "table": 29,
+      "d10": 5,
+      "d6": 5,
+      "variants": [
+        "+1d8 to a saving throw.",
+        "You are unaffected by a poison or harmful substance you ingest."
+      ]
+    },
+    {
+      "table": 30,
+      "d10": 5,
+      "d6": 6,
+      "variants": [
+        "+1d10 to a saving throw.",
+        "You keep your footing or avoid a fall."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 31,
+      "d10": 6,
+      "d6": 1,
+      "variants": [
+        "+1d12 to a saving throw.",
+        "You win a game or contest of skill, wits, or logic."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 32,
+      "d10": 6,
+      "d6": 2,
+      "variants": [
+        "Until the end of your turn, you do not provoke opportunity attacks.",
+        "You manage to navigate hazardous terrain without harm."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 33,
+      "d10": 6,
+      "d6": 3,
+      "variants": [
+        "Receive the maximum amount of healing from a single source.",
+        "You find someone or something that can treat a disease afflicting you."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 34,
+      "d10": 6,
+      "d6": 4,
+      "variants": [
+        "Force an attacker to reroll an attack.",
+        "You narrowly avoid activating a trap."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 35,
+      "d10": 6,
+      "d6": 5,
+      "variants": [
+        "You find twice as much treasure as you otherwise would.",
+        "You get the best possible price when you sell an item."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+2 * @prof",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 36,
+      "d10": 6,
+      "d6": 6,
+      "variants": [
+        "Your attack stuns your target.",
+        "Avoid triggering an alarm."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "check"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "table": 37,
+      "d10": 7,
+      "d6": 1,
+      "variants": [
+        "You avoid being surprised.",
+        "Automatically spot a trap or ambush."
+      ]
+    },
+    {
+      "table": 38,
+      "d10": 7,
+      "d6": 2,
+      "variants": [
+        "+1d20 to a saving throw.",
+        "A creature surrenders, or gives up information willingly, without a fight."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 39,
+      "d10": 7,
+      "d6": 3,
+      "variants": [
+        "Take minimum damage from a single source.",
+        "Reduce the damage taken by an adjacent ally by half."
+      ]
+    },
+    {
+      "table": 40,
+      "d10": 7,
+      "d6": 4,
+      "variants": [
+        "Turn a critical hit against you into a normal hit.",
+        "You gain advantage on a contested ability check."
+      ]
+    },
+    {
+      "table": 41,
+      "d10": 7,
+      "d6": 5,
+      "variants": [
+        "An adjacent ally may make an attack against a chosen target.",
+        "Obtain a clue, or become privy to a secret."
+      ]
+    },
+    {
+      "table": 42,
+      "d10": 7,
+      "d6": 6,
+      "variants": [
+        "Your attack deals an additional 1d4 damage.",
+        "A creature gives you advice on a problem."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 43,
+      "d10": 8,
+      "d6": 1,
+      "variants": [
+        "Your attack deals an additional 1d6 damage.",
+        "+1d20 to a Dexterity-based ability check."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 44,
+      "d10": 8,
+      "d6": 2,
+      "variants": [
+        "Your attack deals an additional 1d8 damage.",
+        "+1d20 to a Strength-based ability check."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 45,
+      "d10": 8,
+      "d6": 3,
+      "variants": [
+        "Your attack deals an additional 1d10 damage.",
+        "You succeed on a Performance check."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 46,
+      "d10": 8,
+      "d6": 4,
+      "variants": [
+        "Your attack deals an additional 1d12 damage.",
+        "You succeed on an Intimidation check."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 47,
+      "d10": 8,
+      "d6": 5,
+      "variants": [
+        "Your attack deals an additional 1d20 damage.",
+        "A creature flees instead of engaging with you."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 48,
+      "d10": 8,
+      "d6": 6,
+      "variants": [
+        "Reduce damage from a single source by 1d4.",
+        "Interrupt a creature before they do something they (or you) might regret."
+      ]
+    },
+    {
+      "table": 49,
+      "d10": 9,
+      "d6": 1,
+      "variants": [
+        "Reduce damage from a single source by 1d6.",
+        "You avoid hazardous environmental effects for one turn."
+      ]
+    },
+    {
+      "table": 50,
+      "d10": 9,
+      "d6": 2,
+      "variants": [
+        "Reduce damage from a single source by 1d8.",
+        "You gain temporary hit points equal to twice your proficiency bonus."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "tempHp",
+            "formula": "2*@prof",
+            "who": "you",
+            "when": "always"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 51,
+      "d10": 9,
+      "d6": 3,
+      "variants": [
+        "Reduce damage from a single source by 1d10.",
+        "You succeed on a check to maintain Concentration."
+      ]
+    },
+    {
+      "table": 52,
+      "d10": 9,
+      "d6": 4,
+      "variants": [
+        "Reduce damage from a single source by 1d12.",
+        "+1d20 to an Intelligence-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 53,
+      "d10": 9,
+      "d6": 5,
+      "variants": [
+        "Reduce damage from a single source by 1d20.",
+        "+1d20 to a Wisdom-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 54,
+      "d10": 9,
+      "d6": 6,
+      "variants": [
+        "Instead of being reduced to 0 hit points, you are instead reduced to 1 hit point.",
+        "Be cured of poison or disease."
+      ]
+    },
+    {
+      "table": 55,
+      "d10": 10,
+      "d6": 1,
+      "variants": [
+        "+1d20 to an attack roll.",
+        "An object thrown to draw attention, knock something down, or similar, has the desired effect."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "+1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 56,
+      "d10": 10,
+      "d6": 2,
+      "variants": [
+        "You avoid being stunned.",
+        "Reduce the number of hostile creatures by one."
+      ]
+    },
+    {
+      "table": 57,
+      "d10": 10,
+      "d6": 3,
+      "variants": [
+        "Automatically find a safe place to rest.",
+        "Automatically discover a safe source of food or water."
+      ]
+    },
+    {
+      "table": 58,
+      "d10": 10,
+      "d6": 4,
+      "variants": [
+        "You stand up from prone without expending any movement.",
+        "Automatically overcome one condition."
+      ]
+    },
+    {
+      "table": 59,
+      "d10": 10,
+      "d6": 5,
+      "variants": [
+        "Your attack blinds your target.",
+        "Learn the location of a secret or hidden place."
+      ],
+      "auto": [
+        [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 60,
+      "d10": 10,
+      "d6": 6,
+      "variants": [
+        "Your attack damages your target's armor and reduces their AC by 1.",
+        "A merchant has the item you need."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    }
+  ]
+}

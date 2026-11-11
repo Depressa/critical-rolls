@@ -1,0 +1,41 @@
+<div class="cr-manual">
+  <div class="form-group">
+    <label>{{labels.section}}</label>
+    <div class="form-fields">
+      <select name="section">
+        {{#each sections}}<option value="{{value}}" data-columns="{{columns}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group" data-cr-column-row>
+    <label data-cr-column-label>{{labels.column}}</label>
+    <div class="form-fields">
+      <select name="column"></select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{labels.actor}}</label>
+    <div class="form-fields">
+      <select name="actor">
+        <option value="">{{labels.noActor}}</option>
+        {{#each actorGroups}}
+        <optgroup label="{{label}}">
+          {{#each actors}}<option value="{{uuid}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}
+        </optgroup>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{labels.table}}</label>
+    <div class="form-fields">
+      <input type="number" name="table" min="1" max="60" step="1" placeholder="{{labels.random}}">
+    </div>
+    <p class="hint">{{labels.tableHint}}</p>
+  </div>
+
+  <p class="hint">{{targetsLine}}</p>
+</div>

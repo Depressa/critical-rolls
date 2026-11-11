@@ -1,0 +1,406 @@
+{
+  "CRITROLLS": {
+    "Title": "Critical Rolls",
+    "Section": {
+      "miss": "Critical miss",
+      "hitGM": "Critical hit (for the GM)",
+      "hitPC": "Critical hit (for players)",
+      "fumble": "Fumble effect",
+      "luck": "Luck effect"
+    },
+    "Card": {
+      "User": "Rolled by",
+      "GM": "GM",
+      "Actor": "Character",
+      "Side": "Side",
+      "Roll": "Roll",
+      "Targets": "Targets",
+      "AttackKind": "Attack type",
+      "DamageColumn": "Damage type",
+      "Dice": "Dice",
+      "Total": "Total",
+      "Missing": {
+        "data": "This section has no table.",
+        "column": "Could not determine the attack type or damage type: choose the effect manually from the book.",
+        "entry": "The table has no entry for the rolled result."
+      }
+    },
+    "Result": {
+      "Rerolls": "rerolls: {n}"
+    },
+    "Status": {
+      "applied": "Applied",
+      "declined": "Declined",
+      "both": "Both options kept",
+      "variant": "Option {n} chosen"
+    },
+    "Button": {
+      "apply": "Apply",
+      "decline": "Decline",
+      "reroll": "Reroll",
+      "revise": "Change",
+      "both": "Keep both",
+      "variant": "Option {n}"
+    },
+    "Fx": {
+      "DamageFlavor": "Takes {type} damage",
+      "Target": {
+        "ac": "AC",
+        "speed": "Speed",
+        "attack": "Attack",
+        "damage": "Damage",
+        "save": "Saving throw",
+        "check": "Check",
+        "skill": "Skill"
+      },
+      "Scope": {
+        "melee": "(melee)",
+        "ranged": "(ranged)"
+      },
+      "Speed": {
+        "half": "halved",
+        "zero": "0"
+      },
+      "Damage": {
+        "acid": "acid",
+        "bludgeoning": "bludgeoning",
+        "cold": "cold",
+        "fire": "fire",
+        "force": "force",
+        "lightning": "lightning",
+        "necrotic": "necrotic",
+        "piercing": "piercing",
+        "poison": "poison",
+        "psychic": "psychic",
+        "radiant": "radiant",
+        "slashing": "slashing",
+        "thunder": "thunder"
+      },
+      "Mode": {
+        "double": "double",
+        "triple": "triple",
+        "quadruple": "quadruple",
+        "quintuple": "quintuple",
+        "maxPlus": "maximum and one more roll",
+        "max": "maximum",
+        "maxDouble": "double maximum",
+        "maxTriple": "triple maximum",
+        "maxQuadruple": "quadruple maximum"
+      },
+      "Duration": {
+        "rounds": "for {n} rnd.",
+        "minutes": "for {n} min.",
+        "hours": "for {n} hr.",
+        "days": "for {n} d.",
+        "turnEnd": "until the end of the turn",
+        "permanent": "permanently",
+        "shortRest": "until a short rest",
+        "longRest": "until a long rest"
+      },
+      "Text": {
+        "damage": "Damage {formula}{type}",
+        "heal": "Healing {formula}",
+        "tempHp": "Temporary HP {formula}",
+        "oneShot": "on the next roll",
+        "nextRolls": "on the next {n} rolls",
+        "crit": "Attack damage: {mode}",
+        "uses": "only the next {n}",
+        "abilities": "based on: {list}",
+        "rule": "{rule}: {rolls}",
+        "tickSave": "{ability} save DC {dc}, on a failure: {status}",
+        "quarterMax": "a quarter of maximum HP",
+        "prof": "proficiency bonus"
+      },
+      "Note": {
+        "noTarget": "no target",
+        "noTargetSelect": "no target: select a token and press the button again",
+        "applied": "applied",
+        "failedSave": "after a failed saving throw",
+        "choice": "at the GM's discretion",
+        "critAwaiting": "awaiting the damage roll",
+        "critPending": "will change the damage roll",
+        "critChanged": "damage roll changed: was {before}, now {after}",
+        "critNone": "no change to the damage roll is needed",
+        "alreadyApplied": "already applied earlier, not applied again"
+      },
+      "Button": {
+        "apply": "Apply",
+        "critApply": "Change damage"
+      },
+      "Rule": {
+        "advantage": "Advantage",
+        "disadvantage": "Disadvantage",
+        "halfDamage": "Half damage",
+        "minDamage": "Minimum damage"
+      },
+      "Roll": {
+        "attack": "attack rolls",
+        "check": "ability checks",
+        "save": "saving throws",
+        "skill": "skill checks",
+        "against": "against it"
+      },
+      "Tick": {
+        "start": "At the start of the turn",
+        "end": "At the end of the turn",
+        "startFlavor": "Damage at the start of the turn {type}",
+        "endFlavor": "Damage at the end of the turn {type}"
+      },
+      "DamageChanged": {
+        "half": "{name}: damage halved (rounded down).",
+        "min": "{name}: minimum damage."
+      }
+    },
+    "Item": {
+      "luck": "Luck",
+      "fumble": "Fumble",
+      "Deferred": "to be chosen",
+      "Use": "Use",
+      "Variant": "Option {n}",
+      "Given": "Item given",
+      "Replaced": "The previous item of this kind was replaced",
+      "Kept": "Item not given: the character already has one",
+      "Used": "This card's item was already used, so a new one was not given",
+      "Failed": "Could not give the item."
+    },
+    "Dialog": {
+      "Effect": "Effect",
+      "Choose": "Choose",
+      "Both": "Keep both options",
+      "BothHint": "If you keep both, the player chooses which one to apply when using the item."
+    },
+    "NoGM": "The GM is offline: only the GM can decide.",
+    "Side": {
+      "player": "Player",
+      "ally": "Ally",
+      "neutral": "Neutral",
+      "enemy": "Enemy"
+    },
+    "RollType": {
+      "attack": "Attack",
+      "ability": "Ability check",
+      "save": "Saving throw",
+      "skill": "Skill check",
+      "tool": "Tool check",
+      "concentration": "Concentration",
+      "death": "Death saving throw",
+      "initiative": "Initiative",
+      "free": "Free roll",
+      "other": "d20 roll",
+      "manual": "Manual table roll"
+    },
+    "AttackKind": {
+      "melee": "Melee",
+      "ranged": "Ranged",
+      "natural": "Natural",
+      "magic": "Magic"
+    },
+    "DamageColumn": {
+      "slashing": "Slashing",
+      "piercing": "Piercing",
+      "bludgeoning": "Bludgeoning",
+      "magical": "Magical",
+      "unknown": "Unknown"
+    },
+    "Mode": {
+      "advantage": "with advantage",
+      "disadvantage": "with disadvantage"
+    },
+    "MissRule": {
+      "Skipped": {
+        "combat": "{name}: the critical miss effect is not rolled, because it has already happened in this combat.",
+        "round": "{name}: the critical miss effect is not rolled, because it has already happened this round."
+      }
+    },
+    "Tables": {
+      "Folder": "Critical Rolls",
+      "Result": "No. {n}{tier}",
+      "Synced": "Critical Rolls tables: created {created}, updated {updated}.",
+      "UpToDate": "Critical Rolls tables are already up to date."
+    },
+    "Simulate": {
+      "Flavor": "[test] {type}"
+    },
+    "Manual": {
+      "Tool": "Set effect manually",
+      "ToolHint": "A chat card as after a real 1 or 20: choose the section, attack or damage type, character and, optionally, the table number. The /cr chat command does the same.",
+      "GMOnly": "The /cr command is available to the GM only.",
+      "Title": "Set effect manually",
+      "Section": "Section",
+      "ColumnAttack": "Attack type",
+      "ColumnDamage": "Damage type",
+      "Actor": "Character",
+      "NoActor": "Not specified",
+      "Table": "Table number",
+      "Random": "Random",
+      "TableHint": "From 1 to 60. If empty, the number is rolled at random, taking the party level into account.",
+      "Targets": "Targets: {names}. “On target” effects will apply to them.",
+      "NoTargets": "No targets selected: “on target” effects will have to be applied after a target is chosen.",
+      "Roll": "Roll",
+      "Characters": "Player characters",
+      "OnScene": "Creatures on the scene",
+      "NeedActor": "Luck and fumble effects need a character: the item is given to them."
+    },
+    "Settings": {
+      "Cancel": "Cancel",
+      "Group": {
+        "sections": {
+          "Title": "Sections",
+          "Hint": "Off: the section does nothing.\nConfirm: the effect applies after the “Apply” button is pressed.\nAuto: the effect applies immediately."
+        },
+        "decisions": {
+          "Title": "Who decides and how it looks",
+          "Hint": "Who sees the window and the buttons on the cards, and whether effects are applied automatically."
+        },
+        "rules": {
+          "Title": "Rules",
+          "Hint": ""
+        },
+        "signals": {
+          "Title": "Sound and highlight",
+          "Hint": "Hidden rolls and hidden tokens give no signal."
+        },
+        "tables": {
+          "Title": "Tables in the sidebar",
+          "Hint": "The Tables sidebar contains a Critical Rolls folder with the tables from the book. The tables themselves do not apply effects: use a manual roll for that."
+        },
+        "tracked": {
+          "Title": "Which rolls luck and fumble apply to",
+          "Hint": "Shown when the luck or fumble section is on."
+        },
+        "service": {
+          "Title": "Service",
+          "Hint": ""
+        }
+      },
+      "section": {
+        "miss": {
+          "Name": "Critical misses",
+          "Hint": "1 on an attack roll (by a player or a monster). The effect depends on the attack type: melee, ranged, natural or magic."
+        },
+        "hitGM": {
+          "Name": "Critical hits for the GM",
+          "Hint": "20 on an enemy attack against a hero. The effect depends on the damage type and applies to the hero."
+        },
+        "hitPC": {
+          "Name": "Critical hits for players",
+          "Hint": "20 on an attack by a player or their ally. The effect depends on the damage type and applies to the target."
+        },
+        "fumble": {
+          "Name": "Fumble effects",
+          "Hint": "1 on any d20 roll by a player (including attacks). The player receives a “Fumble” item."
+        },
+        "luck": {
+          "Name": "Luck effects",
+          "Hint": "20 on any d20 roll by a player (including attacks). The player receives a “Luck” item."
+        }
+      },
+      "mode": {
+        "Off": "Off",
+        "Confirm": "Confirm",
+        "Auto": "Auto"
+      },
+      "playerParticipates": {
+        "Name": "Player takes part in the choice",
+        "Hint": "The character's owner also sees the decision window and the “Apply”, “Decline” and “Reroll” buttons, and decides their own effect."
+      },
+      "showDialog": {
+        "Name": "Show the decision window",
+        "Hint": "The decision window opens for whoever decides and duplicates the buttons on the card in chat."
+      },
+      "applyEffects": {
+        "Name": "Apply effects automatically",
+        "Hint": "Conditions, modifiers and damage without conditions are applied on their own once the decision is made. Effects “after a failed saving throw” and “at the GM's discretion” are applied with a button. When off, everything is applied with buttons only."
+      },
+      "cardVisibility": {
+        "Name": "Who sees the cards",
+        "Hint": "",
+        "All": "Everyone",
+        "GM": "GM only",
+        "Owner": "GM and the character's owner"
+      },
+      "critRule": {
+        "Name": "What counts as a “20”",
+        "Hint": "“By system rules”: the threshold depends on the character. For a Champion and heroes with weapons that lower the critical threshold it is 19–20; for everyone else, and for monsters, only 20. “Pure 20”: the threshold is 20 for everyone, including monsters.",
+        "Dnd5e": "By system rules (the threshold varies)",
+        "Only20": "Pure 20"
+      },
+      "missLimit": {
+        "Name": "Critical miss effect",
+        "Hint": "How often a player or a monster gets a miss effect. If the effect is declined, the next miss is rolled again. Outside combat there is no limit.",
+        "Combat": "Once per combat",
+        "Round": "Once per round",
+        "Any": "Any critical failure"
+      },
+      "soundEnabled": {
+        "Name": "Sound on 1 and 20",
+        "Hint": "All players hear the sound."
+      },
+      "soundCrit": {
+        "Name": "Sound for 20",
+        "Hint": ""
+      },
+      "soundFumble": {
+        "Name": "Sound for 1",
+        "Hint": ""
+      },
+      "pingEnabled": {
+        "Name": "Highlight the token",
+        "Hint": "The roller's token pulses: gold on a 20, red on a 1. Everyone on the same scene sees it."
+      },
+      "autoTables": {
+        "Name": "Create tables automatically",
+        "Hint": "Tables in the sidebar are created and updated automatically when the GM joins the world."
+      },
+      "Tools": {
+        "SyncTablesName": "Tables in the sidebar",
+        "SyncTables": "Create or update tables",
+        "SyncTablesHint": "",
+        "ManualRollName": "Manual effect",
+        "ManualRoll": "Set effect",
+        "ManualRollHint": ""
+      },
+      "ceilingMode": {
+        "Name": "Table ceiling by party level",
+        "Hint": "The higher the group's level, the more dangerous the tables that can come up: the next risk level opens at levels 1, 5, 9 and 13. If a table above the ceiling is rolled, it is rolled again. Only characters with a player owner count; if there are none, there is no ceiling.",
+        "Party": "By the party's average level",
+        "PartyMax": "By the party's highest level",
+        "None": "No limit"
+      },
+      "duplicatePolicy": {
+        "Name": "If the character already has a luck or fumble item",
+        "Hint": "A character has at most one item of each kind. The new one can replace the old one or not be given.",
+        "Replace": "Replace the old one",
+        "Keep": "Keep the old one"
+      },
+      "trackDeathSaves": {
+        "Name": "Track death saving throws",
+        "Hint": "Off by default: a 1 or 20 on a death saving throw already has its own rules."
+      },
+      "trackInitiative": {
+        "Name": "Track initiative",
+        "Hint": "Luck and fumble effects for a 1 and 20 on initiative."
+      },
+      "trackFreeRolls": {
+        "Name": "Track free rolls",
+        "Hint": "Rolls such as /r 1d20 that are not made from a character sheet. Off so that chat rolls do not trigger effects."
+      },
+      "debug": {
+        "Name": "Debug",
+        "Hint": "Details of the module's work in the browser console (F12). Needed only when looking for errors."
+      },
+      "trackAttacks": {
+        "Name": "Attacks",
+        "Hint": "Luck and fumble from a natural 1 or 20 on an attack. Off by default."
+      },
+      "trackChecks": {
+        "Name": "Ability and skill checks",
+        "Hint": "Luck and fumble from a natural 1 or 20 on a check."
+      },
+      "trackSaves": {
+        "Name": "Saving throws",
+        "Hint": "Luck and fumble from a natural 1 or 20 on a saving throw."
+      }
+    }
+  }
+}

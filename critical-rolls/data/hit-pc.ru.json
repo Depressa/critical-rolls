@@ -1,0 +1,2940 @@
+{
+  "section": "hitPC",
+  "title": "Критические попадания для игроков",
+  "source": "Critical Rolls (Game Master's Toolbox), Nord Games, стр. 30–39. Open Game Content по лицензии OGL 1.0a.",
+  "tiers": [
+    {
+      "label": "Неудача",
+      "from": 1,
+      "to": 28
+    },
+    {
+      "label": "Опасность",
+      "from": 29,
+      "to": 45
+    },
+    {
+      "label": "Угроза для жизни",
+      "from": 46,
+      "to": 54
+    },
+    {
+      "label": "Смертельный исход",
+      "from": 55,
+      "to": 60
+    }
+  ],
+  "entries": [
+    {
+      "table": 1,
+      "d10": 1,
+      "d6": 1,
+      "columns": {
+        "slashing": "Двойной урон. Цель атаки ослеплена до конца своего следующего хода.",
+        "piercing": "Максимальный урон.",
+        "bludgeoning": "Двойной урон.",
+        "magical": "Максимальный урон. Ещё одна цель в пределах дистанции подвергается действию заклинания вполовину силы, либо область его действия увеличивается на 5 футов."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 2,
+      "d10": 1,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете реакцией совершить действие Засада.",
+        "piercing": "Максимальный урон. Вы можете реакцией совершить дополнительную атаку.",
+        "bludgeoning": "Максимальный урон. Один противник в пределах 30 футов от вас становится испуганным вами до конца своего следующего хода.",
+        "magical": "Максимальный урон. Вы совершаете следующую атаку заклинанием с преимуществом."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 3,
+      "d10": 1,
+      "d6": 3,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Мудрости Сл 12, или станет испуганной вами до конца своего следующего хода.",
+        "piercing": "Двойной урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 12, или ослепнет на один глаз (на выбор Мастера).",
+        "bludgeoning": "Максимальный урон.",
+        "magical": "Двойной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 4,
+      "d10": 1,
+      "d6": 4,
+      "columns": {
+        "slashing": "Двойной урон.",
+        "piercing": "Максимальный урон. Цель теряет возможность говорить на 1d4 раундов.",
+        "bludgeoning": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или окажется без сознания.",
+        "magical": "Максимальный урон."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 5,
+      "d10": 1,
+      "d6": 5,
+      "columns": {
+        "slashing": "Максимальный урон.",
+        "piercing": "Двойной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или станет ошеломлённой.",
+        "magical": "Двойной урон. Цель атаки должна преуспеть в спасброске заклинательной характеристики Сл 12, или в свой следующий ход не сможет сотворять заклинания."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 6,
+      "d10": 1,
+      "d6": 6,
+      "columns": {
+        "slashing": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или не сможет совершать реакции до конца вашего следующего хода.",
+        "piercing": "Максимальный урон.",
+        "bludgeoning": "Двойной урон.",
+        "magical": "Максимальный урон. Цель на 1d4 раундов получает помеху на спасброски против ваших заклинаний."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 7,
+      "d10": 2,
+      "d6": 1,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете совершить ещё одну атаку по той же цели.",
+        "piercing": "Двойной урон. Если это была рукопашная атака, вы можете увеличить урон до тройного, преуспев в проверке Силы (Атлетика) Сл 16.",
+        "bludgeoning": "Максимальный урон.",
+        "magical": "Двойной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "crit",
+            "mode": "triple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 8,
+      "d10": 2,
+      "d6": 2,
+      "columns": {
+        "slashing": "Двойной урон.",
+        "piercing": "Максимальный урон. Вы можете совершить ещё одну атаку по той же цели с помехой.",
+        "bludgeoning": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или получит помеху на все спасброски до конца своего следующего хода.",
+        "magical": "Максимальный урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 9,
+      "d10": 2,
+      "d6": 3,
+      "columns": {
+        "slashing": "Максимальный урон.",
+        "piercing": "Двойной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или будет отброшена назад на 5 футов.",
+        "magical": "Двойной урон. Все противники, которые видят вас, должны преуспеть в спасброске Мудрости Сл 12, или будут испуганы вами до конца вашего следующего хода."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 10,
+      "d10": 2,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете реакцией совершить действие Отход.",
+        "piercing": "Максимальный урон. Скорость цели атаки снижается до 0 до конца её следующего хода.",
+        "bludgeoning": "Максимальный урон. Если у цели атаки в руках было оружие, она роняет его.",
+        "magical": "Максимальный урон. Цель атаки не может совершать реакции до конца своего следующего хода."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "zero",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 11,
+      "d10": 2,
+      "d6": 5,
+      "columns": {
+        "slashing": "Двойной урон. Скорость цели атаки снижается наполовину до конца её следующего хода.",
+        "piercing": "Максимальный урон.",
+        "bludgeoning": "Двойной урон.",
+        "magical": "Максимальный урон. Вы можете немедленно сотворить это заклинание по той же цели ещё раз, расходуя ячейку заклинания как обычно."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 12,
+      "d10": 2,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 12, или упадёт ничком.",
+        "piercing": "Двойной урон. Цель атаки пригвождается к поверхности и становится опутанной.",
+        "bludgeoning": "Максимальный урон.",
+        "magical": "Двойной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 13,
+      "d10": 3,
+      "d6": 1,
+      "columns": {
+        "slashing": "Двойной урон.",
+        "piercing": "Максимальный урон. Любой противник цели атаки в пределах досягаемости может совершить по ней атаку по возможности с помехой.",
+        "bludgeoning": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или упадёт ничком.",
+        "magical": "Максимальный урон."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 14,
+      "d10": 3,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон.",
+        "piercing": "Двойной урон.",
+        "bludgeoning": "Максимальный урон. КД цели атаки уменьшается на 1d4 до конца её следующего хода.",
+        "magical": "Двойной урон. Если атака наносит урон силовым полем или звуком, а цель атаки — существо размером не крупнее Большого, она отбрасывается назад на (1d4 × 5) футов и получает 1d6 дробящего урона за каждые 5 футов такого «полёта»."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-1d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 15,
+      "d10": 3,
+      "d6": 3,
+      "columns": {
+        "slashing": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или в свой следующий ход совершит на одну атаку меньше.",
+        "piercing": "Максимальный урон.",
+        "bludgeoning": "Двойной урон.",
+        "magical": "Максимальный урон. Если у цели атаки было сопротивление этому виду урона, она теряет его на 1 минуту."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 16,
+      "d10": 3,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Вы и цель атаки совершаете состязание Силы. Если цель проигрывает, её оружие ломается: оно наносит лишь половину обычного урона, пока его не починят.",
+        "piercing": "Двойной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или получит помеху на свой следующий бросок атаки.",
+        "bludgeoning": "Максимальный урон.",
+        "magical": "Двойной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            },
+            "uses": 1
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 17,
+      "d10": 3,
+      "d6": 5,
+      "columns": {
+        "slashing": "Двойной урон.",
+        "piercing": "Максимальный урон. Вы получаете преимущество на следующую атаку по той же цели.",
+        "bludgeoning": "Двойной урон. Цель атаки должна преуспеть в спасброске Силы или Ловкости Сл 12, или уронит то, что держит (Мастер решает, в какой руке, или определяет случайным образом).",
+        "magical": "Максимальный урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 18,
+      "d10": 3,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный урон.",
+        "piercing": "Двойной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 12, или получит помеху на свою следующую рукопашную атаку.",
+        "magical": "Двойной урон. Немагический предмет, который цель держит в руках или носит на себе, также подвергается воздействию вида урона заклинания."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            },
+            "scope": "melee",
+            "uses": 1
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "double"
+          }
+        ]
+      }
+    },
+    {
+      "table": 19,
+      "d10": 4,
+      "d6": 1,
+      "columns": {
+        "slashing": "Тройной урон. Цель атаки ослеплена на 1d4+1 раундов.",
+        "piercing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "bludgeoning": "Тройной урон.",
+        "magical": "Максимальный урон. Ещё две цели в пределах дистанции подвергаются действию заклинания вполовину силы, либо область его действия увеличивается на 10 футов."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 20,
+      "d10": 4,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете реакцией совершить действие Уклонение.",
+        "piercing": "Максимальный урон. Цель атаки в свой следующий ход не может использовать бонусное действие.",
+        "bludgeoning": "Максимальный урон. Если цель атаки использовала щит, он уничтожается.",
+        "magical": "Максимальный урон. Вы восстанавливаете хиты в количестве, равном половине нанесённого урона."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 21,
+      "d10": 4,
+      "d6": 3,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Мудрости Сл 14, или станет испуганной вами на 2d4 раундов.",
+        "piercing": "Тройной урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 14, или ослепнет на один глаз (на выбор Мастера).",
+        "bludgeoning": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "magical": "Тройной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 22,
+      "d10": 4,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете реакцией совершить действие Помощь.",
+        "piercing": "Максимальный урон. Вы получаете преимущество на следующую атаку по цели.",
+        "bludgeoning": "Максимальный урон. Ваша следующая атака по цели наносит ей дополнительные 3d6 урона.",
+        "magical": "Максимальный урон. Вы восстанавливаете ячейку заклинания, уровень которой не больше половины уровня сотворённого заклинания (но не ниже 1-го)."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "damage",
+            "value": "+3d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 23,
+      "d10": 4,
+      "d6": 5,
+      "columns": {
+        "slashing": "Тройной урон.",
+        "piercing": "Максимальный урон. Цель теряет возможность говорить на 2d4 раундов.",
+        "bludgeoning": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или окажется без сознания.",
+        "magical": "Максимальный урон. Бросьте кости урона ещё раз."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 24,
+      "d10": 4,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "piercing": "Тройной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или станет ошеломлённой.",
+        "magical": "Тройной урон. Цель атаки должна преуспеть в спасброске заклинательной характеристики Сл 14, или потеряет возможность сотворять заклинания на 1d4+1 раундов."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 25,
+      "d10": 5,
+      "d6": 1,
+      "columns": {
+        "slashing": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или потеряет возможность совершать реакции на 2d4 раундов.",
+        "piercing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "bludgeoning": "Тройной урон.",
+        "magical": "Максимальный урон. Цель на 2d4 раундов получает помеху на спасброски против ваших заклинаний."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 26,
+      "d10": 5,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете совершить ещё одну атаку по той же цели с преимуществом.",
+        "piercing": "Тройной урон. Если это была рукопашная атака, вы можете увеличить урон до четверного, преуспев в проверке Силы (Атлетика) Сл 14.",
+        "bludgeoning": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "magical": "Тройной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "crit",
+            "mode": "quadruple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 27,
+      "d10": 5,
+      "d6": 3,
+      "columns": {
+        "slashing": "Тройной урон.",
+        "piercing": "Максимальный урон. Вы можете совершить ещё одну атаку по той же цели.",
+        "bludgeoning": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или получит помеху на все спасброски на 1d4+1 раундов.",
+        "magical": "Максимальный урон. Бросьте кости урона ещё раз."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 28,
+      "d10": 5,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "piercing": "Тройной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или будет отброшена назад на 10 футов.",
+        "magical": "Тройной урон. Все противники, которые видят вас, должны преуспеть в спасброске Мудрости Сл 14, или будут испуганы вами на 1d4+1 раундов."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 29,
+      "d10": 5,
+      "d6": 5,
+      "columns": {
+        "slashing": "Тройной урон. Скорость цели атаки снижается до 5 футов до конца её следующего хода.",
+        "piercing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "bludgeoning": "Тройной урон.",
+        "magical": "Максимальный урон. Вы можете немедленно сотворить это заклинание по любой цели в пределах дистанции ещё раз, расходуя ячейку заклинания как обычно."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 30,
+      "d10": 5,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 14, или упадёт ничком.",
+        "piercing": "Тройной урон. Цель атаки пригвождается к поверхности и становится опутанной.",
+        "bludgeoning": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "magical": "Тройной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 31,
+      "d10": 6,
+      "d6": 1,
+      "columns": {
+        "slashing": "Тройной урон.",
+        "piercing": "Максимальный урон. Любой противник цели атаки, находящийся в пределах досягаемости, может совершить по ней атаку по возможности.",
+        "bludgeoning": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или падает ничком.",
+        "magical": "Максимальный урон. Бросьте кости урона ещё раз."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 32,
+      "d10": 6,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "piercing": "Тройной урон.",
+        "bludgeoning": "Максимальный урон. КД цели атаки уменьшен на 2d4 до конца её следующего хода.",
+        "magical": "Тройной урон. Если эта атака наносит урон силовым полем или звуком, а цель атаки — существо размером не крупнее Большого, оно отбрасывается назад на 2d4 × 5 футов и получает 1d6 дробящего урона за каждые 5 футов перемещения."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 33,
+      "d10": 6,
+      "d6": 3,
+      "columns": {
+        "slashing": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или в свой следующий ход сможет совершить на две атаки меньше.",
+        "piercing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "bludgeoning": "Тройной урон.",
+        "magical": "Максимальный урон. Если у цели атаки есть сопротивление этому типу урона, она теряет его на 1 минуту. Если сопротивления нет, цель на 1 минуту получает уязвимость к этому типу урона."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 34,
+      "d10": 6,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Вы и цель атаки совершаете состязание Силы. Если цель проигрывает, её оружие частично ломается и наносит лишь четверть урона, пока его не починят.",
+        "piercing": "Тройной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или получит помеху на все броски атаки на 1d4+1 раундов.",
+        "bludgeoning": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "magical": "Тройной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 35,
+      "d10": 6,
+      "d6": 5,
+      "columns": {
+        "slashing": "Максимальный урон. Бросьте кости урона ещё раз.",
+        "piercing": "Тройной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 14, или получит помеху на все броски атаки на 1d4+1 раундов.",
+        "magical": "Тройной урон. Тип урона этого заклинания также воздействует на два немагических предмета, которые цель атаки держит в руках или носит на себе."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 36,
+      "d10": 6,
+      "d6": 6,
+      "columns": {
+        "slashing": "Тройной урон.",
+        "piercing": "Максимальный урон. На 1d4+1 раундов вы получаете преимущество на броски атаки по той же цели.",
+        "bludgeoning": "Тройной урон. Цель атаки должна преуспеть в спасброске Силы или Ловкости Сл 14, или уронит то, что держит в руках (Мастер решает, какую руку, или определяет её случайным образом).",
+        "magical": "Максимальный урон. Бросьте кости урона ещё раз."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d4+1"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "triple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxPlus"
+          }
+        ]
+      }
+    },
+    {
+      "table": 37,
+      "d10": 7,
+      "d6": 1,
+      "columns": {
+        "slashing": "Четверной урон. Цель атаки становится ослеплённой на 3d4+2 раундов.",
+        "piercing": "Максимальный двойной урон.",
+        "bludgeoning": "Четверной урон.",
+        "magical": "Максимальный урон. Ещё три цели в пределах дистанции заклинания получают половину эффекта, либо область действия заклинания увеличивается на 15 футов."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "blinded",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "3d4+2"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 38,
+      "d10": 7,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Мудрости Сл 16, или станет испуганной вами на 3d4 раундов.",
+        "piercing": "Четверной урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 16, или потеряет глаз (какой именно, решает Мастер).",
+        "bludgeoning": "Максимальный двойной урон.",
+        "magical": "Четверной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "3d4"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 39,
+      "d10": 7,
+      "d6": 3,
+      "columns": {
+        "slashing": "Четверной урон.",
+        "piercing": "Максимальный урон. Цель атаки на 3d4 раундов теряет возможность говорить.",
+        "bludgeoning": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или окажется без сознания.",
+        "magical": "Максимальный двойной урон."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 40,
+      "d10": 7,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный двойной урон.",
+        "piercing": "Четверной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или станет ошеломлённой.",
+        "magical": "Четверной урон. Цель атаки должна преуспеть в спасброске заклинательной характеристики Сл 16, или на 3d4 раундов потеряет возможность сотворять заклинания."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 41,
+      "d10": 7,
+      "d6": 5,
+      "columns": {
+        "slashing": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или на 3d4 раундов потеряет возможность совершать реакции.",
+        "piercing": "Максимальный двойной урон.",
+        "bludgeoning": "Четверной урон.",
+        "magical": "Максимальный урон. Цель атаки на 3d4 раундов получает помеху на спасброски против ваших заклинаний."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 42,
+      "d10": 7,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете совершить ещё одну атаку.",
+        "piercing": "Четверной урон. Если это была рукопашная атака, вы можете увеличить урон до ×5, преуспев в проверке Силы (Атлетика) Сл 16.",
+        "bludgeoning": "Максимальный двойной урон.",
+        "magical": "Четверной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "crit",
+            "mode": "quintuple",
+            "when": "choice"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 43,
+      "d10": 8,
+      "d6": 1,
+      "columns": {
+        "slashing": "Четверной урон.",
+        "piercing": "Максимальный урон. Вы можете с преимуществом совершить ещё одну атаку по той же цели.",
+        "bludgeoning": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или получит помеху на все спасброски на 2d4+2 раундов.",
+        "magical": "Максимальный двойной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 44,
+      "d10": 8,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный двойной урон.",
+        "piercing": "Четверной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или будет отброшена назад на 15 футов.",
+        "magical": "Четверной урон. Все противники, которые вас видят, должны преуспеть в спасброске Мудрости Сл 16, или будут испуганы вами на 2d4+2 раундов."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 45,
+      "d10": 8,
+      "d6": 3,
+      "columns": {
+        "slashing": "Четверной урон. Скорость цели атаки становится равной 0 до конца её следующего хода.",
+        "piercing": "Максимальный двойной урон.",
+        "bludgeoning": "Четверной урон.",
+        "magical": "Максимальный урон. Вы можете немедленно сотворить это же заклинание на любую цель в пределах дистанции, не тратя ячейку заклинания."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "zero",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 46,
+      "d10": 8,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Цель атаки должна преуспеть в спасброске Ловкости Сл 16, или падает ничком.",
+        "piercing": "Четверной урон. Цель атаки пригвождается к поверхности и становится опутанной.",
+        "bludgeoning": "Максимальный двойной урон.",
+        "magical": "Четверной урон."
+      },
+      "auto": {
+        "slashing": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "status": "restrained",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 47,
+      "d10": 8,
+      "d6": 5,
+      "columns": {
+        "slashing": "Четверной урон.",
+        "piercing": "Максимальный урон. Любой противник цели атаки, находящийся в пределах досягаемости, может совершить по ней атаку по возможности с преимуществом.",
+        "bludgeoning": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или падает ничком.",
+        "magical": "Максимальный двойной урон."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "prone",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 48,
+      "d10": 8,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный двойной урон.",
+        "piercing": "Четверной урон.",
+        "bludgeoning": "Максимальный урон. КД цели атаки уменьшен на 3d4 до конца её следующего хода.",
+        "magical": "Четверной урон. Если эта атака наносит урон силовым полем или звуком, а цель атаки — существо размером не крупнее Большого, оно отбрасывается назад на 3d4 × 5 футов и получает 1d6 дробящего урона за каждые 5 футов перемещения."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-3d4",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 49,
+      "d10": 9,
+      "d6": 1,
+      "columns": {
+        "slashing": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или в свой следующий ход сможет совершить на три атаки меньше.",
+        "piercing": "Максимальный двойной урон.",
+        "bludgeoning": "Четверной урон.",
+        "magical": "Максимальный урон. Цель атаки на 1 минуту получает уязвимость к типу нанесённого урона."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 50,
+      "d10": 9,
+      "d6": 2,
+      "columns": {
+        "slashing": "Максимальный урон. Вы и цель атаки совершаете состязание Силы. Если цель проигрывает, её оружие ломается.",
+        "piercing": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или на 2d4+2 раундов получит помеху на все броски атаки.",
+        "bludgeoning": "Максимальный двойной урон.",
+        "magical": "Четверной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 51,
+      "d10": 9,
+      "d6": 3,
+      "columns": {
+        "slashing": "Четверной урон.",
+        "piercing": "Максимальный урон. На 2d4+2 раундов вы получаете преимущество на броски атаки по той же цели.",
+        "bludgeoning": "Четверной урон. Цель атаки должна преуспеть в спасброске Силы или Ловкости Сл 16, или уронит то, что держит в руках (Мастер решает, какую руку, или определяет её случайным образом).",
+        "magical": "Максимальный двойной урон."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "advantage",
+            "rolls": [
+              "attack"
+            ],
+            "sameTarget": true,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ]
+      }
+    },
+    {
+      "table": 52,
+      "d10": 9,
+      "d6": 4,
+      "columns": {
+        "slashing": "Максимальный урон. Вы можете реакцией вдохновить одного союзника в пределах 30 футов, который вас слышит. Реакцией он может совершить одну атаку оружием.",
+        "piercing": "Максимальный урон. Вы можете реакцией подбодрить одного союзника в пределах 30 футов, который вас слышит. Реакцией он может переместиться к вам на расстояние до своей скорости.",
+        "bludgeoning": "Максимальный урон. Вы можете реакцией подтолкнуть к действию одного союзника в пределах 30 футов, который вас слышит. Реакцией он может совершить действие Отход и переместиться на половину своей скорости.",
+        "magical": "Максимальный урон. Вы можете реакцией усилить одного союзника в пределах 30 футов, который вас слышит. Реакцией он может сотворить одно заклинание."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 53,
+      "d10": 9,
+      "d6": 5,
+      "columns": {
+        "slashing": "Максимальный урон. На 1d6 раундов ваша скорость увеличивается на 10 футов.",
+        "piercing": "Максимальный урон. Если цель атаки носит доспех, КД этого доспеха уменьшен на 2.",
+        "bludgeoning": "Максимальный урон. Если цель атаки держит в руках оружие, оно уничтожается.",
+        "magical": "Максимальный урон. Вы становитесь невидимым до конца вашего следующего хода."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "invisible",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "+10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "modifier",
+            "target": "ac",
+            "value": "-2",
+            "who": "other",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 54,
+      "d10": 9,
+      "d6": 6,
+      "columns": {
+        "slashing": "Максимальный двойной урон.",
+        "piercing": "Четверной урон.",
+        "bludgeoning": "Максимальный урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 16, или на 2d4+2 раундов получит помеху на все броски атаки.",
+        "magical": "Четверной урон. Тип урона этого заклинания также воздействует на три предмета, которые цель атаки держит в руках или носит на себе."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "maxDouble"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "rounds",
+              "value": "2d4+2"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 55,
+      "d10": 10,
+      "d6": 1,
+      "columns": {
+        "slashing": "Максимальный урон. Если эта атака снижает хиты цели до 0, весь избыточный урон переходит на другую цель по вашему выбору в пределах дистанции.",
+        "piercing": "Максимальный урон. Цель атаки не может совершать действие в свой следующий ход.",
+        "bludgeoning": "Максимальный урон. Цель атаки становится ошеломлённой до конца своего следующего хода.",
+        "magical": "Максимальный урон. Вы восстанавливаете ячейку заклинания, потраченную на это заклинание."
+      },
+      "auto": {
+        "bludgeoning": [
+          {
+            "status": "stunned",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "max"
+          }
+        ]
+      }
+    },
+    {
+      "table": 56,
+      "d10": 10,
+      "d6": 2,
+      "columns": {
+        "slashing": "Четверной урон. Если цели атаки нанесён урон не менее половины её максимальных хитов, она обезглавливается.",
+        "piercing": "Четверной урон. Цель атаки должна преуспеть в спасброске Телосложения Сл 18, или станет парализованной.",
+        "bludgeoning": "Четверной урон. Если цели атаки нанесён урон не менее четверти её максимальных хитов, она падает без сознания.",
+        "magical": "Четверной урон. Вы восстанавливаете ячейку заклинания. Бросьте d6, чтобы определить её уровень."
+      },
+      "auto": {
+        "piercing": [
+          {
+            "status": "paralyzed",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "status": "unconscious",
+            "who": "other",
+            "when": "choice",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 57,
+      "d10": 10,
+      "d6": 3,
+      "columns": {
+        "slashing": "Четверной урон. Если цели атаки нанесён урон не менее половины её максимальных хитов, она выпотрошена.",
+        "piercing": "Четверной урон. В начале каждого своего хода в течение 3 раундов цель атаки теряет четверть своих максимальных хитов.",
+        "bludgeoning": "Четверной урон. На 1 минуту цель атаки получает уязвимость к дробящему урону.",
+        "magical": "Четверной урон. Эффект заклинания распространяется на всех существ в пределах 15 футов от цели атаки."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "quarterMax",
+            "damageType": null,
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "3"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 58,
+      "d10": 10,
+      "d6": 4,
+      "columns": {
+        "slashing": "Четверной урон. Если цели атаки нанесён урон не менее четверти её максимальных хитов, она теряет ногу.",
+        "piercing": "Четверной урон. На 1 минуту цель атаки получает уязвимость к колющему урону.",
+        "bludgeoning": "Четверной урон. Скорость цели атаки уменьшается вдвое. Кроме того, она получает 1d6 урона за каждые 5 футов перемещения.",
+        "magical": "Четверной урон. Цель атаки должна преуспеть в спасброске Мудрости Сл 18, или на 1 минуту потеряет вас из виду."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 59,
+      "d10": 10,
+      "d6": 5,
+      "columns": {
+        "slashing": "Четверной урон. Если цели атаки нанесён урон не менее половины её максимальных хитов, она теряет руку или кисть.",
+        "piercing": "Четверной урон. До конца столкновения цель атаки получает помеху на все свои броски атаки.",
+        "bludgeoning": "Четверной урон. Цель атаки лишается возможности пользоваться одной из рук или кистей.",
+        "magical": "Четверной урон. Все противники, которые вас видят, должны преуспеть в спасброске Мудрости Сл 18, или станут испуганными вами. В конце своего хода противник может повторить спасбросок, чтобы перестать быть испуганным."
+      },
+      "auto": {
+        "magical": [
+          {
+            "status": "frightened",
+            "who": "other",
+            "when": "failedSave",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ]
+      }
+    },
+    {
+      "table": 60,
+      "d10": 10,
+      "d6": 6,
+      "columns": {
+        "slashing": "Четверной урон. Вы можете реакцией совершить действие Рывок.",
+        "piercing": "Четверной урон. Цель атаки истекает кровью: в начале каждого своего хода в течение 1d6 раундов она теряет 1d4 хитов.",
+        "bludgeoning": "Четверной урон. Вы можете реакцией попытаться схватить цель.",
+        "magical": "Четверной урон. Цель атаки получает дополнительные 3d4 урона силовым полем."
+      },
+      "fx": {
+        "slashing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "piercing": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "tick",
+            "at": "start",
+            "damage": "1d4",
+            "damageType": null,
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d6"
+            }
+          }
+        ],
+        "bludgeoning": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          }
+        ],
+        "magical": [
+          {
+            "type": "crit",
+            "mode": "quadruple"
+          },
+          {
+            "type": "damage",
+            "formula": "3d4",
+            "damageType": "force",
+            "who": "other",
+            "when": "always"
+          }
+        ]
+      }
+    }
+  ]
+}

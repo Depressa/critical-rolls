@@ -1,0 +1,1174 @@
+{
+  "section": "fumble",
+  "title": "Bad luck effects",
+  "source": "Critical Rolls (Game Master's Toolbox), Nord Games, pp. 41–43. Open Game Content under OGL 1.0a.",
+  "entries": [
+    {
+      "table": 1,
+      "d10": 1,
+      "d6": 1,
+      "variants": [
+        "Miss on an attack roll.",
+        "-1d20 to a Persuasion check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "skill",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "skill"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 2,
+      "d10": 1,
+      "d6": 2,
+      "variants": [
+        "Reroll an attack roll.",
+        "An overlooked detail forces you to redo a task."
+      ]
+    },
+    {
+      "table": 3,
+      "d10": 1,
+      "d6": 3,
+      "variants": [
+        "Disadvantage on an attack roll.",
+        "You fail to see or hear something significant."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 4,
+      "d10": 1,
+      "d6": 4,
+      "variants": [
+        "−1d4 to an attack roll.",
+        "You gain the attention of a more powerful creature nearby."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 5,
+      "d10": 1,
+      "d6": 5,
+      "variants": [
+        "−1d6 to an attack roll.",
+        "You gain no benefit from your next short rest."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 6,
+      "d10": 1,
+      "d6": 6,
+      "variants": [
+        "−1d8 to an attack roll.",
+        "Something valuable in your possession is damaged."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 7,
+      "d10": 2,
+      "d6": 1,
+      "variants": [
+        "−1d10 to an attack roll.",
+        "A fire starts nearby."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 8,
+      "d10": 2,
+      "d6": 2,
+      "variants": [
+        "−1d12 to an attack roll.",
+        "You lose or drop a key piece of equipment."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 9,
+      "d10": 2,
+      "d6": 3,
+      "variants": [
+        "A missed attack against you now hits.",
+        "A risk you have taken does not pay off."
+      ]
+    },
+    {
+      "table": 10,
+      "d10": 2,
+      "d6": 4,
+      "variants": [
+        "Fail an ability check.",
+        "You embarrass yourself at an inopportune moment."
+      ]
+    },
+    {
+      "table": 11,
+      "d10": 2,
+      "d6": 5,
+      "variants": [
+        "Act last in the initiative order.",
+        "You lose your footing or take a tumble."
+      ]
+    },
+    {
+      "table": 12,
+      "d10": 2,
+      "d6": 6,
+      "variants": [
+        "Deal minimum damage on an attack.",
+        "You accidentally reveal a flaw or vice to one that might take advantage."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "minDamage",
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 13,
+      "d10": 3,
+      "d6": 1,
+      "variants": [
+        "Fail a saving throw.",
+        "You trigger a trap that you did not notice."
+      ]
+    },
+    {
+      "table": 14,
+      "d10": 3,
+      "d6": 2,
+      "variants": [
+        "Disadvantage on a saving throw.",
+        "You mistake somebody for someone else."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "save"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 15,
+      "d10": 3,
+      "d6": 3,
+      "variants": [
+        "−1d4 to a saving throw.",
+        "You drop your coin purse, spilling its contents."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 16,
+      "d10": 3,
+      "d6": 4,
+      "variants": [
+        "−1d6 to a saving throw.",
+        "A magical ability or spell goes awry."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 17,
+      "d10": 3,
+      "d6": 5,
+      "variants": [
+        "−1d8 to a saving throw.",
+        "You are reminded of a traumatic memory that makes you hesitate."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 18,
+      "d10": 3,
+      "d6": 6,
+      "variants": [
+        "−1d10 to a saving throw.",
+        "Your action has the opposite effect to what was intended."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 19,
+      "d10": 4,
+      "d6": 1,
+      "variants": [
+        "−1d12 to a saving throw.",
+        "You accidentally harm yourself with a weapon or spell effect."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 20,
+      "d10": 4,
+      "d6": 2,
+      "variants": [
+        "Your speed is halved for 1d2 rounds.",
+        "You are spotted by someone you are trying to avoid."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "speed",
+            "value": "half",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d2"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 21,
+      "d10": 4,
+      "d6": 3,
+      "variants": [
+        "Until the end of your turn, opportunity attacks against you are made with advantage.",
+        "Receive the minimum amount of healing from a single source."
+      ]
+    },
+    {
+      "table": 22,
+      "d10": 4,
+      "d6": 4,
+      "variants": [
+        "Your blow glances off and strikes a nearby creature.",
+        "Your sleep is interrupted, perhaps by vivid nightmares or a disturbance."
+      ]
+    },
+    {
+      "table": 23,
+      "d10": 4,
+      "d6": 5,
+      "variants": [
+        "You take ongoing bleeding damage from an attack that hits you.",
+        "A small item on your person goes missing."
+      ]
+    },
+    {
+      "table": 24,
+      "d10": 4,
+      "d6": 6,
+      "variants": [
+        "You discover your weapon is in disrepair; it deals half damage until you can take the time required to tend to it.",
+        "Something unsanitary infects you with a disease."
+      ]
+    },
+    {
+      "table": 25,
+      "d10": 5,
+      "d6": 1,
+      "variants": [
+        "An attack that hits you stuns you until the end of your next turn.",
+        "A person you interact with takes an irrational dislike to you."
+      ],
+      "auto": [
+        [
+          {
+            "status": "stunned",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 26,
+      "d10": 5,
+      "d6": 2,
+      "variants": [
+        "An enemy you fight chooses to attack you over other targets, wherever possible.",
+        "A chosen creature always knows where you are."
+      ]
+    },
+    {
+      "table": 27,
+      "d10": 5,
+      "d6": 3,
+      "variants": [
+        "Reroll an ability check.",
+        "You do not add your proficiency bonus to an ability check."
+      ]
+    },
+    {
+      "table": 28,
+      "d10": 5,
+      "d6": 4,
+      "variants": [
+        "Reroll a saving throw.",
+        "You mistake a hazard for something harmless."
+      ]
+    },
+    {
+      "table": 29,
+      "d10": 5,
+      "d6": 5,
+      "variants": [
+        "Your attacks are made with disadvantage for 1d2 rounds.",
+        "You gain no benefit from your next long rest."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "attack"
+            ],
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d2"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 30,
+      "d10": 5,
+      "d6": 6,
+      "variants": [
+        "–1d4 to an ability check.",
+        "Your tools break or become damaged while in use."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d4",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 31,
+      "d10": 6,
+      "d6": 1,
+      "variants": [
+        "–1d6 to an ability check.",
+        "You mistake one potion for another and drink it."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 32,
+      "d10": 6,
+      "d6": 2,
+      "variants": [
+        "–1d8 to an ability check.",
+        "You accidentally injure yourself."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d8",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 33,
+      "d10": 6,
+      "d6": 3,
+      "variants": [
+        "–1d10 to an ability check.",
+        "A mistake you make harms another creature."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d10",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 34,
+      "d10": 6,
+      "d6": 4,
+      "variants": [
+        "–1d12 to an ability check.",
+        "You are convinced that an ability check has succeeded."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d12",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 35,
+      "d10": 6,
+      "d6": 5,
+      "variants": [
+        "–1d20 to an ability check.",
+        "You lose the use of one skill for 24 hours."
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 36,
+      "d10": 6,
+      "d6": 6,
+      "variants": [
+        "Disadvantage on an ability check.",
+        "−1d6 to a Wisdom (Perception) or Intelligence (Investigation) check."
+      ],
+      "fx": [
+        [
+          {
+            "type": "roll",
+            "rule": "disadvantage",
+            "rolls": [
+              "check"
+            ],
+            "uses": 1,
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        [
+          {
+            "type": "modifier",
+            "target": "skill",
+            "value": "-1d6",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "skill"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 37,
+      "d10": 7,
+      "d6": 1,
+      "variants": [
+        "Fail to spot an ambush.",
+        "-1d20 to an Intelligence-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 38,
+      "d10": 7,
+      "d6": 2,
+      "variants": [
+        "–1d20 to a saving throw.",
+        "You are blinded for 1d2 rounds."
+      ],
+      "auto": [
+        [],
+        [
+          {
+            "status": "blinded",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d2"
+            }
+          }
+        ]
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "save",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "save"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 39,
+      "d10": 7,
+      "d6": 3,
+      "variants": [
+        "Take maximum damage from a single source.",
+        "-1d20 to a Strength-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 40,
+      "d10": 7,
+      "d6": 4,
+      "variants": [
+        "Turn an attack roll against you into a critical hit.",
+        "One of your limbs becomes unusable for 1d2 rounds."
+      ]
+    },
+    {
+      "table": 41,
+      "d10": 7,
+      "d6": 5,
+      "variants": [
+        "A weapon attack made against you is poisoned.",
+        "A substance you consume poisons you."
+      ],
+      "auto": [
+        [],
+        [
+          {
+            "status": "poisoned",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "table": 42,
+      "d10": 7,
+      "d6": 6,
+      "variants": [
+        "You take an extra 1d4 damage from a single source.",
+        "You do not add your proficiency bonus to an ability check that requires tools."
+      ]
+    },
+    {
+      "table": 43,
+      "d10": 8,
+      "d6": 1,
+      "variants": [
+        "You take an extra 1d6 damage from a single source.",
+        "You have disadvantage on a check to maintain Concentration."
+      ]
+    },
+    {
+      "table": 44,
+      "d10": 8,
+      "d6": 2,
+      "variants": [
+        "You take an extra 1d8 damage from a single source.",
+        "You vomit up a potion you just consumed, rendering it useless."
+      ]
+    },
+    {
+      "table": 45,
+      "d10": 8,
+      "d6": 3,
+      "variants": [
+        "You take an extra 1d10 damage from a single source.",
+        "-1d20 to a Dexterity-based ability check."
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 46,
+      "d10": 8,
+      "d6": 4,
+      "variants": [
+        "You take an extra 1d12 damage from a single source.",
+        "You lose your voice and are unable to speak for 1d2 rounds."
+      ]
+    },
+    {
+      "table": 47,
+      "d10": 8,
+      "d6": 5,
+      "variants": [
+        "You take an extra 1d20 damage from a single source.",
+        "You cannot take a move action this round."
+      ]
+    },
+    {
+      "table": 48,
+      "d10": 8,
+      "d6": 6,
+      "variants": [
+        "−1d20 to an attack roll.",
+        "A substance you give someone else to consume poisons them."
+      ],
+      "auto": [
+        [],
+        [
+          {
+            "status": "poisoned",
+            "who": "other",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ],
+      "fx": [
+        [
+          {
+            "type": "modifier",
+            "target": "attack",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "attack"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 49,
+      "d10": 9,
+      "d6": 1,
+      "variants": [
+        "Gold pieces you find are, instead, copper pieces.",
+        "2d20 gold pieces are stolen from you."
+      ]
+    },
+    {
+      "table": 50,
+      "d10": 9,
+      "d6": 2,
+      "variants": [
+        "An unlocked door or chest you find is, instead, locked.",
+        "When you attempt to pick a lock, your lockpick breaks."
+      ]
+    },
+    {
+      "table": 51,
+      "d10": 9,
+      "d6": 3,
+      "variants": [
+        "You take double damage when surprised.",
+        "An additional hostile creature appears."
+      ]
+    },
+    {
+      "table": 52,
+      "d10": 9,
+      "d6": 4,
+      "variants": [
+        "You cannot find a place to rest.",
+        "You are attacked and surprised by a creature while sleeping."
+      ]
+    },
+    {
+      "table": 53,
+      "d10": 9,
+      "d6": 5,
+      "variants": [
+        "An attack that hits you disarms you.",
+        "You knock an item out of someone's hand."
+      ]
+    },
+    {
+      "table": 54,
+      "d10": 9,
+      "d6": 6,
+      "variants": [
+        "An attack that hits you knocks you prone.",
+        "-1d20 to a Wisdom-based ability check."
+      ],
+      "auto": [
+        [
+          {
+            "status": "prone",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 55,
+      "d10": 10,
+      "d6": 1,
+      "variants": [
+        "You can take an action, move OR take a bonus action this turn.",
+        "You are deafened for 1d2 rounds."
+      ],
+      "auto": [
+        [],
+        [
+          {
+            "status": "deafened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "rounds",
+              "value": "1d2"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "table": 56,
+      "d10": 10,
+      "d6": 2,
+      "variants": [
+        "An attack that hits you grapples you.",
+        "-1d20 to a Charisma-based ability check."
+      ],
+      "auto": [
+        [
+          {
+            "status": "grappled",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        []
+      ],
+      "fx": [
+        [],
+        [
+          {
+            "type": "modifier",
+            "target": "check",
+            "value": "-1d20",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            },
+            "oneShot": "check"
+          }
+        ]
+      ]
+    },
+    {
+      "table": 57,
+      "d10": 10,
+      "d6": 3,
+      "variants": [
+        "You become frightened by something you can see.",
+        "You are paralyzed by fear."
+      ],
+      "auto": [
+        [
+          {
+            "status": "frightened",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ],
+        [
+          {
+            "status": "paralyzed",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "unspecified"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "table": 58,
+      "d10": 10,
+      "d6": 4,
+      "variants": [
+        "An enemy makes an additional attack against you.",
+        "One of your NPC allies is imperiled."
+      ]
+    },
+    {
+      "table": 59,
+      "d10": 10,
+      "d6": 5,
+      "variants": [
+        "An attack that hits you incapacitates you until the end of your next turn.",
+        "An NPC ally tries to save themself instead of you."
+      ],
+      "auto": [
+        [
+          {
+            "status": "incapacitated",
+            "who": "you",
+            "when": "always",
+            "duration": {
+              "type": "turnEnd"
+            }
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "table": 60,
+      "d10": 10,
+      "d6": 6,
+      "variants": [
+        "You fail to draw your weapon or implement.",
+        "You accidentally damage an item that does not belong to you."
+      ]
+    }
+  ]
+}

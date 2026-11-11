@@ -1,0 +1,10 @@
+# Служебные файлы системы и редакторов
+Thumbs.db
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Зависимости и временные файлы разработки
+node_modules/
+coverage/
